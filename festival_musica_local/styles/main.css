@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #faedca;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fe5d25;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#main-banner {
+    text-align: center;
+    display: inline-block;
+    margin: 10px auto;
+    margin-top: 1px;
+    padding: 20px 140px;
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #CC0000;
+}
+
+nav {
+    background-color: #f2c078;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    animation: fadeInDown 0.8s ease-in;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fdf6e3;
+    text-decoration: none;
+    padding: 10px 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+nav ul li a:hover {
+    background-color: #CC0000;
+    color: #fdf6e3
+}
+
+main {
+    padding: 20px 0;
+}
+
+section {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+section.img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+img.social {
+    margin: 0 10px;
+    width: 30px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #c1dbb3;
+    color: #000000;
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .aside {
+    display: none;
+  }
+
+  header, main, footer {
+    flex-direction: column;
+  }
+}
+
+/* Tablet */
+@media (min-width: 800px) and (max-width: 991px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+/* PC Escritorio */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
