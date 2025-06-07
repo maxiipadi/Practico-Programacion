@@ -7,28 +7,28 @@
     <title>Sonidos de Mi Ciudad - Inicio</title>
     <link rel="stylesheet" href="/styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" href="/img/1.png" type="image/png">
+    <script src="/JS/components.js"></script>
 </head>
 
 <body>
     <!-- Encabezado -->
-    <table width="100%" bgcolor="#333333" cellpadding="20">
-        <tr>
-            <td align="center">
-                <font color="#ffffff" size="6" face="Arial"><b>Entradas del Festival</b></font>
-            </td>
-        </tr>
-    </table>
-
+    <header>
+        <div id="main-banner">
+            <h1 class="animate__animated animate__bounce">Entradas</h1>
+        </div>
+    </header>
     <!-- Navegación -->
-   <nav style="width: 100%; background-color: #444444; padding: 10px; display: flex; justify-content: center;">
-        <a href="../index.html" style="color: #ffffff; font-family: Arial; margin: 0 15px; text-decoration: none;">INICIO</a>
-        <a href="artistas.html" style="color: #ffffff; font-family: Arial; margin: 0 15px; text-decoration: none;">ARTISTAS</a>
-        <a href="cronograma.html" style="color: #ffffff; font-family: Arial; margin: 0 15px; text-decoration: none;">CRONOGRAMA</a>
-        <a href="entradas.html" style="color: #ffffff; font-family: Arial; margin: 0 15px; text-decoration: none;">ENTRADAS</a>
-        <a href="ubicacion.html" style="color: #ffffff; font-family: Arial; margin: 0 15px; text-decoration: none;">UBICACIÓN</a>
-        <a href="contacto.html" style="color: #ffffff; font-family: Arial; margin: 0 15px; text-decoration: none;">CONTACTO</a>
+    <nav>
+        <ul>
+            <li><a href="/index.html">INICIO</a></li>
+            <li><a href="/templates/artistas.html">ARTISTAS</a></li>
+            <li><a href="/templates/cronograma.html">CRONOGRAMA</a></li>
+            <li><a href="/templates/entradas.html">ENTRADAS</a></li>
+            <li><a href="/templates/ubicacion.html">UBICACIÓN</a></li>
+            <li><a href="/templates/contacto.html">CONTACTO</a></li>
+        </ul>
     </nav>
 
     <!-- Contenido -->
@@ -46,11 +46,13 @@
                         <li><b>Entrada VIP:</b> Acceso preferencial, sectores exclusivos y beneficios adicionales.</li>
                     </ul>
 
-                    <p><b>Formas de pago:</b> Efectivo, tarjeta de crédito/débito (Visa, Mastercard, Tarjeta Sol), transferencia bancaria.</p>
+                    <p><b>Formas de pago:</b> Efectivo, tarjeta de crédito/débito (Visa, Mastercard, Tarjeta Sol),
+                        transferencia bancaria.</p>
 
                     <p><b>¿Dónde comprar?</b></p>
                     <ul>
-                        <li>Online: <a href="https://www.ticketsfolklore.com.ar" target="_blank">TicketsFolklore.com.ar</a></li>
+                        <li>Online: <a href="https://www.ticketsfolklore.com.ar"
+                                target="_blank">TicketsFolklore.com.ar</a></li>
                         <li>Presencial: Teatro 25 de Mayo y Pago Donde Nací.</li>
                     </ul>
 
@@ -83,21 +85,21 @@
                             <td align="center" rowspan="3">Abono 3 días</td>
                             <td align="center">GENERAL</td>
                             <td align="center">$40.000</td>
-                            <tr>
-                            
+                        <tr>
+
                             <td align="center">PLATEA</td>
                             <td align="center">$65.000</td>
                         </tr>
-                        </tr>
-                        <tr>
-                            
-                            <td align="center">VIP</td>
-                            <td align="center">$110.000</td>
-                        </tr>
-                    </table>
-                </font>
-            </td>
         </tr>
+        <tr>
+
+            <td align="center">VIP</td>
+            <td align="center">$110.000</td>
+        </tr>
+    </table>
+    </font>
+    </td>
+    </tr>
     </table>
 
     <!-- Pie de página -->
@@ -110,4 +112,5 @@
         <p style="font-family: Arial;">&copy; 2025 Sonidos de Mi Ciudad. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>
