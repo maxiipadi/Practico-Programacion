@@ -4,23 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ubicacion</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/contacto.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" href="/img/1.png" type="image/png">
-    <script src="/JS/components.js"></script>
+    <script src="/JS/components.js" defer></script>
 </head>
 
 <body>
-    <!-- Encabezado -->
     <header>
         <div id="main-banner">
             <h1 class="animate__animated animate__bounce">Contacto</h1>
         </div>
     </header>
 
-    <!-- Navegación -->
     <nav>
         <ul>
             <li><a href="/index.html">INICIO</a></li>
@@ -32,69 +31,54 @@
         </ul>
     </nav>
 
-    <!-- Enlaces adicionales -->
-    <table width="80%" align="center" cellpadding="10">
-        <tr>
-            <td>
-                <font face="Arial" size="4">
-                    <p>¿Querés comunicarte? <a href="#formulario">Ir al formulario</a></p>
-                    <p>O escribinos directamente por <a href="mailto:info@sonidosmiCiudad.com">correo electrónico</a></p>
-                    <p>También podés contactarnos por <a href="https://wa.me/543874123456" target="_blank">WhatsApp</a> o <a href="tel:+543874123456">llamarnos</a>.</p>
-                    <p>Para comprar tus entradas online hacé clic en <a href="https://www.ticketsfolklore.com.ar" target="_blank">TicketsFolklore.com.ar</a></p>
-                </font>
-            </td>
-        </tr>
-    </table>
+    <main class="container">
+        <section class="contact-info">
+            <p>¿Querés comunicarte? <a href="#formulario">Ir al formulario</a></p>
+            <p>O escribinos directamente por <a href="mailto:info@sonidosmiCiudad.com">correo electrónico</a></p>
+            <p>También podés contactarnos por <a href="https://wa.me/543874123456" target="_blank">WhatsApp</a> o <a href="tel:+543874123456">llamarnos</a>.</p>
+            <p>Para comprar tus entradas online hacé clic en <a href="https://www.ticketsfolklore.com.ar" target="_blank">TicketsFolklore.com.ar</a></p>
+        </section>
 
-    <!-- Contenido principal -->
-    <main>
-        <!-- Formulario de contacto -->
-        <table width="80%" align="center" cellpadding="20" bgcolor="#ffffff" id="formulario">
-            <tr>
-                <td>
-                    <font face="Arial" size="4">
-                        <p>¿Tenés alguna duda, consulta o sugerencia? ¡Escribinos! Completá el formulario y nos pondremos en contacto.</p>
-                    </font>
+        <section id="formulario" class="contact-form">
+            <h2>Formulario de Contacto</h2>
+            <p>¿Tenés alguna duda, consulta o sugerencia? ¡Escribinos! Completá el formulario y nos pondremos en contacto.</p>
 
-                    <form action="submit_form.php" method="POST">
-                        <fieldset>
-                            <legend><font face="Arial" size="4"><b>Formulario de Contacto</b></font></legend>
-                            <font face="Arial" size="3">
-                                <label for="nombre">Nombre:</label><br>
-                                <input type="text" id="nombre" name="nombre" size="40"><br><br>
+            <form action="submit_form.php" method="POST">
+                <fieldset>
+                    <legend><b>Datos del contacto</b></legend>
 
-                                <label for="apellido">Apellido:</label><br>
-                                <input type="text" id="apellido" name="apellido" size="40"><br><br>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
 
-                                <label for="email">Correo electrónico:</label><br>
-                                <input type="email" id="email" name="email" size="40"><br><br>
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
 
-                                <label for="asunto">Asunto:</label><br>
-                                <input type="text" id="asunto" name="asunto" size="40"><br><br>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-                                <label for="mensaje">Mensaje:</label><br>
-                                <textarea id="mensaje" name="mensaje" rows="6" cols="60">Escribe tu mensaje</textarea><br><br>
+                    <div class="form-group">
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="asunto" name="asunto">
+                    </div>
 
-                                <input type="submit" value="Enviar">
-                            </font>
-                        </fieldset>
-                    </form>
-                </td>
-            </tr>
-        </table>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribí tu mensaje aquí..."></textarea>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </section>
     </main>
 
-    <!-- Pie de página -->
-     <footer style="text-align: center; margin-top: 30px; padding: 20px; background-color: #333333; color: #ffffff;">
-        <p style="font-family: Arial; font-weight: bold;">¡Seguinos en nuestras redes sociales!</p>
-        <img src="../img/facebook.png" alt="Facebook" width="30" style="margin: 0 10px;">
-        <img src="../img/instagram.png" alt="Instagram" width="30" style="margin: 0 10px;">
-        <img src="../img/tik-tok.png" alt="Tik-tok" width="30" style="margin: 0 10px;">
-        <img src="../img/youtube.png" alt="YouTube" width="30" style="margin: 0 10px;">
-        <p style="font-family: Arial;">&copy; 2025 Sonidos de Mi Ciudad. Todos los derechos reservados.</p>
-    </footer>
-
+    <div id="footer-component"></div>
 </body>
+
 </html>
-
-

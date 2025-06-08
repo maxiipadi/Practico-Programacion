@@ -1,0 +1,101 @@
+/* contacto.css - Estilos específicos para el formulario de contacto */
+
+.contact-wrapper {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-wrapper p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.contact-wrapper a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.contact-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.contact-form fieldset {
+    border: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.contact-form legend {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0077cc;
+    background-color: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button,
+.contact-form input[type="submit"] {
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover,
+.contact-form input[type="submit"]:hover {
+    background-color: #005fa3;
+}
+
+@media (max-width: 600px) {
+    .contact-wrapper {
+        padding: 1rem;
+    }
+
+    .contact-form button,
+    .contact-form input[type="submit"] {
+        width: 100%;
+    }
+}
