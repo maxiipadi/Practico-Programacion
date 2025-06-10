@@ -1,4 +1,4 @@
-Líder Supremo:
+Maximiliano Fabian Padilla: Lider del Proyecto
 
 *Responsabilidades:*
 - Crear el repositorio en GitHub.
@@ -9,7 +9,7 @@ Líder Supremo:
 
 ---
 
-👩‍🎨 @Marcos Ariel Romano : Diseñador/a Web (HTML + CSS Grid)
+👩‍🎨 Marcos Ariel Romano : Diseñador/a Web (HTML + CSS Grid)
 
 *Responsabilidades:*
 - Maquetación principal (header, secciones, footer).
@@ -19,7 +19,7 @@ Líder Supremo:
 
 ---
 
-🧑‍💻 @Sebastián Itse : Contenido y Experiencia de Usuario (UX)
+🧑‍💻 Mario Sebastian Ruiz : Contenido y Experiencia de Usuario (UX)
 
 *Responsabilidades:*
 - Cargar el contenido real del festival (artistas, horarios, descripción).
