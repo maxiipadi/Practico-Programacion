@@ -33,3 +33,45 @@
     margin-bottom: 10px;
     color: #333;
 }
+
+.bloque-flotante {
+    overflow: hidden;
+    margin: 30px auto;
+    width: 80%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+   
+}
+
+.caja-relativa {
+    position: relative;
+    display: inline-block;
+}
+.img-flotante {
+    width: 500px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.img-flotante:hover {
+    transform: scale(1.05);
+}
+
+.etiqueta {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(204, 0, 0, 0.85); /* semitransparente */
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    z-index: 10;
+}
+
+.info-artista {
+    overflow: hidden; /* para evitar que el float rompa el layout */
+}

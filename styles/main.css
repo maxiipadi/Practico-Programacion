@@ -91,7 +91,9 @@ section.img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     margin-top: 20px;
 }
-
+video.section{
+    text-align: center;
+}
 ul {
     list-style: none;
     padding: 0;
@@ -109,6 +111,9 @@ footer {
     background-color: #c1dbb3;
     color: #000000;
 }
+
+
+
 
 /* Móvil */
 @media (max-width: 600px) {
@@ -135,3 +140,4 @@ footer {
     margin: auto;
   }
 }
+

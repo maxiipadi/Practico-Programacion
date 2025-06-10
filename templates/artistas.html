@@ -2,104 +2,102 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ubicacion</title>
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/artistas.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="icon" href="/img/1.png" type="image/png" />
-    <script src="/JS/components.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artistas</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/artistas.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="icon" href="/img/1.png" type="image/png" />
+  <script src="/JS/components.js"></script>
 </head>
 
-<!-- Encabezado -->
-<header>
-    <div id="main-banner">
-        <h1 class="animate__animated animate__bounce">Artistas</h1>
-    </div>
-</header>
-
-<!-- Navegación -->
-<nav>
-    <ul>
-        <li><a href="/index.html">INICIO</a></li>
-        <li><a href="/templates/artistas.html">ARTISTAS</a></li>
-        <li><a href="/templates/cronograma.html">CRONOGRAMA</a></li>
-        <li><a href="/templates/entradas.html">ENTRADAS</a></li>
-        <li><a href="/templates/ubicacion.html">UBICACIÓN</a></li>
-        <li><a href="/templates/contacto.html">CONTACTO</a></li>
-    </ul>
-</nav>
-
 <body>
-    <main>
-        <section class="artistas">
-            <h2 class="titulo-artistas">
-                Artistas Estelares
-            </h2>
+  <!-- Encabezado -->
+  <header>
+    <div id="main-banner">
+      <h1 class="animate__animated animate__bounce">Artistas</h1>
+    </div>
+  </header>
 
-            <!-- Dúo Coplanacu -->
-            <div class="artista">
-                <h2>Dúo Coplanacu</h2>
-                <img src="../img/COPLANACU.jpg" alt="Dúo Coplanacu" class="imagen-artista">
-                <p>El Dúo Coplanacu, integrado por Roberto Cantos y Julio Paz, es una figura emblemática del folklore
-                    argentino...</p>
-            </div>
+  <!-- Navegación -->
+  <nav>
+    <ul>
+      <li><a href="/index.html">INICIO</a></li>
+      <li><a href="/templates/artistas.html">ARTISTAS</a></li>
+      <li><a href="/templates/cronograma.html">CRONOGRAMA</a></li>
+      <li><a href="/templates/entradas.html">ENTRADAS</a></li>
+      <li><a href="/templates/ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="/templates/contacto.html">CONTACTO</a></li>
+    </ul>
+  </nav>
 
-            <p>
-                Su formación en 1985 en Santiago del Estero ha dado como resultado
-                una rica trayectoria de más de 30 años, con numerosas grabaciones y
-                premios, incluyendo el Premio Konex de Platino en 2005.
-            </p>
-            <audio controls>
-                <source src="../audios/duo_coplanacu.mp3" type="audio/mpeg" />
-                Tu navegador no soporta el elemento de audio.
-            </audio>
-            </article>
+  <main>
+    <section class="artistas">
+      <h2 class="titulo-artistas">Artistas Estelares</h2>
 
-            <!-- Los Manseros Santiagueños -->
-            <article class="artista">
-                <h2>Los Manseros Santiagueños</h2>
-                <figure>
-                    <img src="../img/MANSEROS.jpg" alt="Los Manseros Santiagueños" class="imagen-artista">
-                    <figcaption>
-                        Grupo formado en 1959, referente del folklore de Santiago del
-                        Estero.
-                    </figcaption>
-                </figure>
-                <p>
-                    Interpretan chacareras, gatos y escondidos, siendo una de las bandas
-                    más queridas por el público. Han recorrido todo el país dejando
-                    huella en cada festival.
-                </p>
-                <audio controls>
-                    <source src="../audios/los_manseros.mp3" type="audio/mpeg" />
-                    Tu navegador no soporta el elemento de audio.
-                </audio>
-            </article>
+      <!-- Dúo Coplanacu -->
+      <section class="bloque-flotante">
+        <div class="caja-relativa">
+          <img src="../img/COPLANACU.jpg" alt="Dúo Coplanacu" class="img-flotante" />
+          <span class="etiqueta">DESTACADO</span>
+        </div>
+        <div class="info-artista">
+          <h2>Dúo Coplanacu</h2>
+          <p>
+            El Dúo Coplanacu, integrado por Roberto Cantos y Julio Paz, desde su formación en 1985 en Santiago del Estero ha dado como resultado una rica trayectoria de más de 30 años, con numerosas grabaciones y premios, incluyendo el Premio Konex de Platino en 2005.
+          </p>
+          <audio controls>
+            <source src="../audios/duo_coplanacu.mp3" type="audio/mpeg" />
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+        </div>
+      </section>
 
-            <!-- Abel Pintos -->
-            <article class="artista">
-                <h2>Abel Pintos</h2>
-                <figure>
-                    <img src="../img/ABEL.jpg" alt="Abel Pintos" class="imagen-artista">
-                    <figcaption>Cantautor argentino multipremiado.</figcaption>
-                </figure>
-                <p>
-                    Abel comenzó su carrera a los 13 años y ha emocionado a miles con su
-                    voz. Con discos de oro y múltiples Premios Gardel, es uno de los
-                    artistas más reconocidos de la escena nacional.
-                </p>
-                <audio controls>
-                    <source src="../audios/abel_pintos.mp3" type="audio/mpeg" />
-                    Tu navegador no soporta el elemento de audio.
-                </audio>
-            </article>
-        </section>
-    </main>
-    <!-- Pie de página -->
+      <!-- Los Manseros Santiagueños -->
+      <section class="bloque-flotante">
+        <div class="caja-relativa">
+          <img src="../img/MANSEROS.jpg" alt="Los Manseros Santiagueños" class="img-flotante" />
+          <span class="etiqueta">LEYENDA</span>
+        </div>
+        <div class="info-artista">
+          <h2>Los Manseros Santiagueños</h2>
+          <p>
+            Grupo formado en 1959, referente del folklore de Santiago del Estero. Interpretan chacareras, gatos y escondidos, siendo una de las bandas más queridas por el público. Han recorrido todo el país dejando huella en cada festival.
+          </p>
+          <audio controls>
+            <source src="../audios/los_manseros.mp3" type="audio/mpeg" />
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+        </div>
+      </section>
+
+      <!-- Abel Pintos -->
+      <section class="bloque-flotante">
+        <div class="caja-relativa">
+          <img src="../img/ABEL.jpg" alt="Abel Pintos" class="img-flotante" />
+          <span class="etiqueta">PREMIADO</span>
+        </div>
+        <div class="info-artista">
+          <h2>Abel Pintos</h2>
+          <p>
+            Abel comenzó su carrera a los 13 años y ha emocionado a miles con su voz. Con discos de oro y múltiples Premios Gardel, es uno de los artistas más reconocidos de la escena nacional.
+          </p>
+          <audio controls>
+            <source src="../audios/abel_pintos.mp3" type="audio/mpeg" />
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
     <div id="footer-component"></div>
+  </footer>
 </body>
 
 </html>

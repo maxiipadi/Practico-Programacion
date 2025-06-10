@@ -14,69 +14,15 @@
   text-align: center;
 }
 
-.contact-info {
-  font-size: 1em;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-.contact-info a {
-  color: #cc0000;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-.contact-form form {
-  background-color: #fdfdfd;
-  padding: 20px;
+.mapa-ubicacion {
+  margin: 30px auto;
+  text-align: center;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-textarea {
-  resize: vertical;
-}
-
-button {
-  background-color: #cc0000;
-  color: white;
-  padding: 10px 20px;
-  font-size: 1em;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #a30000;
-}
-
-/* Menú Sticky */
+/* Menu sticky */
 .menu-sticky {
   background-color: #f2c078;
   padding: 10px;

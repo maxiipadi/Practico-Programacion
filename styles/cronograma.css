@@ -14,69 +14,37 @@
   text-align: center;
 }
 
-.contact-info {
-  font-size: 1em;
-  line-height: 1.6;
-  margin-bottom: 30px;
+.tabla-wrapper {
+  overflow-x: auto;
 }
 
-.contact-info a {
-  color: #cc0000;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-.contact-form form {
-  background-color: #fdfdfd;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
+.tabla-cronograma {
   width: 100%;
-  padding: 10px;
+  border-collapse: collapse;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-textarea {
-  resize: vertical;
+.tabla-cronograma th,
+.tabla-cronograma td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.05em;
 }
 
-button {
-  background-color: #cc0000;
-  color: white;
-  padding: 10px 20px;
-  font-size: 1em;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+.tabla-cronograma th {
+  background-color: #f2c078;
+  color: #000;
 }
 
-button:hover {
-  background-color: #a30000;
+.tabla-cronograma tr:hover {
+  background-color: #fff3e6;
 }
 
-/* Menú Sticky */
 .menu-sticky {
   background-color: #f2c078;
   padding: 10px;
@@ -109,7 +77,6 @@ button:hover {
   padding: 5px 10px;
 }
 
-/* Footer */
 footer {
     text-align: center;
     margin-top: 10px;
