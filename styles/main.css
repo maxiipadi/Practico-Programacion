@@ -135,3 +135,19 @@ footer {
     margin: auto;
   }
 }
+
+.fila {
+  overflow: hidden; /* para contener los floats */
+}
+
+.columna-izq {
+  float: left;
+  width: 60%;
+  padding: 10px;
+}
+
+.columna-der {
+  float: right;
+  width: 35%;
+  padding: 10px;
+}
