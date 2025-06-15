@@ -35,17 +35,18 @@
   <!-- Cronograma -->
   <main>
     <section class="contenedor-cronograma">
-      <h2 class="titulo-cronograma">Programación del Festival</h2>
+      <!-- Tabla para escritorio -->
       <div class="tabla-wrapper">
         <table class="tabla-cronograma">
-          <thead>
-            <tr>
-              <th>Fecha</th>
-              <th>Escenario</th>
-              <th>Artista</th>
-              <th>Hora</th>
-            </tr>
-          </thead>
+            <caption class="caption-cronograma">Programación del festival</caption>
+        <thead>
+          <tr>
+            <th scope="col">Fecha</th>
+            <th scope="col">Escenario</th>
+            <th scope="col">Artista</th>
+            <th scope="col">Hora</th>
+          </tr>
+  </thead>
           <tbody>
             <!-- Día 1 -->
             <tr>
@@ -64,7 +65,6 @@
               <td>Dúo Coplanacu</td>
               <td>23:00</td>
             </tr>
-
             <!-- Día 2 -->
             <tr>
               <td rowspan="3">17/05/2025</td>
@@ -82,7 +82,6 @@
               <td>Los Manseros Santiagueños</td>
               <td>23:00</td>
             </tr>
-
             <!-- Día 3 -->
             <tr>
               <td rowspan="3">18/05/2025</td>
@@ -103,11 +102,72 @@
           </tbody>
         </table>
       </div>
+
+      <!-- Grid de tarjetas para móvil -->
+      <div class="cards-grid">
+        <!-- Día 1 -->
+        <div class="card">
+          <p class="fecha">16/05/2025</p>
+          <p class="escenario">Escenario Norte</p>
+          <p class="artista">Orellana Lucca</p>
+          <p class="hora">21:00</p>
+        </div>
+        <div class="card">
+          <p class="fecha">16/05/2025</p>
+          <p class="escenario">Escenario Principal</p>
+          <p class="artista">Bruno Arias</p>
+          <p class="hora">22:00</p>
+        </div>
+        <div class="card">
+          <p class="fecha">16/05/2025</p>
+          <p class="escenario">Escenario Principal</p>
+          <p class="artista">Dúo Coplanacu</p>
+          <p class="hora">23:00</p>
+        </div>
+        <!-- Día 2 -->
+        <div class="card">
+          <p class="fecha">17/05/2025</p>
+          <p class="escenario">Escenario Norte</p>
+          <p class="artista">Peteco Carabajal</p>
+          <p class="hora">21:00</p>
+        </div>
+        <div class="card">
+          <p class="fecha">17/05/2025</p>
+          <p class="escenario">Escenario Principal</p>
+          <p class="artista">Horacio Banegas</p>
+          <p class="hora">22:00</p>
+        </div>
+        <div class="card">
+          <p class="fecha">17/05/2025</p>
+          <p class="escenario">Escenario Principal</p>
+          <p class="artista">Los Manseros Santiagueños</p>
+          <p class="hora">23:00</p>
+        </div>
+        <!-- Día 3 -->
+        <div class="card">
+          <p class="fecha">18/05/2025</p>
+          <p class="escenario">Escenario Norte</p>
+          <p class="artista">Rally Barrionuevo</p>
+          <p class="hora">21:00</p>
+        </div>
+        <div class="card">
+          <p class="fecha">18/05/2025</p>
+          <p class="escenario">Escenario Principal</p>
+          <p class="artista">Nestor Garnica</p>
+          <p class="hora">22:00</p>
+        </div>
+        <div class="card">
+          <p class="fecha">18/05/2025</p>
+          <p class="escenario">Escenario Principal</p>
+          <p class="artista">Abel Pintos</p>
+          <p class="hora">23:00</p>
+        </div>
+      </div>
     </section>
   </main>
 
   <!-- Pie de página -->
-   <footer>
+  <footer>
     <div id="footer-component"></div>
   </footer>
 </body>

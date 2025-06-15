@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sonidos de Mi Ciudad - Entradas</title>
   <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/entradas.css" />
+  <link rel="stylesheet" href="/styles/cronograma.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="icon" href="/img/1.png" type="image/png" />
@@ -17,12 +17,12 @@
   <!-- Encabezado -->
   <header>
     <div id="main-banner">
-      <h1 class="animate__animated animate__bounce">Entradas</h1>
+      <h1 class="titulo-cronograma animate__animated animate__bounce">Entradas</h1>
     </div>
   </header>
 
   <!-- Navegación -->
-  <nav >
+  <nav>
     <ul>
       <li><a href="/index.html">INICIO</a></li>
       <li><a href="/templates/artistas.html">ARTISTAS</a></li>
@@ -54,9 +54,10 @@
 
       <p><strong>¡Comprá tus entradas con anticipación! Cupos limitados.</strong></p>
 
+      <!-- Tabla para escritorio -->
       <div class="tabla-wrapper">
         <table class="tabla-cronograma">
-          <caption><strong>Precios de Entradas</strong></caption>
+          <caption class="caption-cronograma">Precios de Entradas</caption>
           <thead>
             <tr>
               <th>Día</th>
@@ -96,12 +97,48 @@
           </tbody>
         </table>
       </div>
+
+      <!-- Cards para móviles -->
+      <div class="cards-grid">
+        <div class="card">
+          <div class="fecha">16,17,18/05/2025</div>
+          <div class="tipo">General</div>
+          <div class="precio">$15.000</div>
+        </div>
+        <div class="card">
+          <div class="fecha">16,17,18/05/2025</div>
+          <div class="tipo">Platea</div>
+          <div class="precio">$25.000</div>
+        </div>
+        <div class="card">
+          <div class="fecha">16,17,18/05/2025</div>
+          <div class="tipo">Vip</div>
+          <div class="precio">$40.000</div>
+        </div>
+        <div class="card">
+          <div class="fecha">Abono 3 días</div>
+          <div class="tipo">General</div>
+          <div class="precio">$40.000</div>
+        </div>
+        <div class="card">
+          <div class="fecha">Abono 3 días</div>
+          <div class="tipo">Platea</div>
+          <div class="precio">$65.000</div>
+        </div>
+        <div class="card">
+          <div class="fecha">Abono 3 días</div>
+          <div class="tipo">Vip</div>
+          <div class="precio">$110.000</div>
+        </div>
+      </div>
+
     </section>
   </main>
 
   <!-- Pie de página -->
- <footer>
+  <footer>
     <div id="footer-component"></div>
   </footer>
 </body>
+
 </html>
