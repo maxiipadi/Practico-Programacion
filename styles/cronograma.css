@@ -1,0 +1,117 @@
+.contenedor-cronograma {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Tabla cronograma */
+.tabla-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+.tabla-cronograma {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
+}
+.tabla-cronograma th,
+.tabla-cronograma td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+/* Caption  */
+.caption-cronograma {
+  caption-side: top;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: #CC0000;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-bottom: 2px solid #cc0000;
+}
+
+/* Cards grid (oculto en desktop por defecto) */
+.cards-grid {
+  display: none;
+  width: 100%;
+  gap: 1rem;
+}
+
+/* Tarjeta individual */
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+.card .fecha {
+  font-weight: bold;
+  color: #CC0000;
+}
+
+/* Responsive móvil (≤600px) */
+@media (max-width: 600px) {
+  .tabla-wrapper {
+    display: none;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .titulo-cronograma {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    font-size: 0.85rem;
+    padding: 0.75rem;
+  }
+}
+
+/* Responsive tablets y laptops pequeñas (≤992px) */
+@media (max-width: 992px) {
+  .tabla-cronograma th,
+  .tabla-cronograma td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+.tabla-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.tabla-cronograma {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.tabla-cronograma th,
+.tabla-cronograma td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.caption-cronograma {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #cc0000;
+}
