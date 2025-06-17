@@ -2,13 +2,15 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonidos de Mi Ciudad - Inicio</title>
-    <link rel="stylesheet" href="/styles/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonidos de Mi Ciudad - Entradas</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/cronograma.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="icon" href="/img/1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="/img/1.png" type="image/png" />
     <script src="/JS/components.js"></script>
 </head>
 
@@ -16,9 +18,10 @@
     <!-- Encabezado -->
     <header>
         <div id="main-banner">
-            <h1 class="animate__animated animate__bounce">Entradas</h1>
+            <h1>Entradas</h1>
         </div>
     </header>
+
     <!-- Navegación -->
     <nav>
         <ul>
@@ -31,85 +34,113 @@
         </ul>
     </nav>
 
-    <!-- Contenido -->
-    <table width="80%" align="center" cellpadding="20" bgcolor="#ffffff">
-        <tr>
-            <td>
-                <font face="Arial" size="4">
-                    <p><b>¡Viví la experiencia única del Festival Sonidos de Mi Ciudad 2025!</b></p>
+    <main>
+        <section class="contenedor-cronograma">
+            <h2 class="titulo-cronograma">¡Viví la experiencia única del festival!</h2>
 
-                    <p>Contamos con distintas opciones de entradas para que elijas la que mejor se adapte a vos:</p>
+            <p>Contamos con distintas opciones de entradas para que elijas la que mejor se adapte a vos:</p>
+            <ul>
+                <li><strong>Entradas diarias:</strong> Acceso por día al festival.</li>
+                <li><strong>Abono general (3 días):</strong> Ingreso a todas las jornadas a un precio promocional.</li>
+                <li><strong>Entrada VIP:</strong> Acceso preferencial, sectores exclusivos y beneficios adicionales.
+                </li>
+            </ul>
 
-                    <ul>
-                        <li><b>Entradas diarias:</b> Acceso por día al festival.</li>
-                        <li><b>Abono general (3 días):</b> Ingreso a todas las jornadas a un precio promocional.</li>
-                        <li><b>Entrada VIP:</b> Acceso preferencial, sectores exclusivos y beneficios adicionales.</li>
-                    </ul>
+            <p><strong>Formas de pago:</strong> Efectivo, tarjeta de crédito/débito (Visa, Mastercard, Tarjeta Sol),
+                transferencia bancaria.</p>
 
-                    <p><b>Formas de pago:</b> Efectivo, tarjeta de crédito/débito (Visa, Mastercard, Tarjeta Sol),
-                        transferencia bancaria.</p>
+            <p><strong>¿Dónde comprar?</strong></p>
+            <ul>
+                <li>Online: <a href="https://www.ticketsfolklore.com.ar" target="_blank">TicketsFolklore.com.ar</a></li>
+                <li>Presencial: Teatro 25 de Mayo y Pago Donde Nací.</li>
+            </ul>
 
-                    <p><b>¿Dónde comprar?</b></p>
-                    <ul>
-                        <li>Online: <a href="https://www.ticketsfolklore.com.ar"
-                                target="_blank">TicketsFolklore.com.ar</a></li>
-                        <li>Presencial: Teatro 25 de Mayo y Pago Donde Nací.</li>
-                    </ul>
+            <p><strong>¡Comprá tus entradas con anticipación! Cupos limitados.</strong></p>
 
-                    <p><b>¡Comprá tus entradas con anticipación! Cupos limitados.</b></p>
-
-                    <!-- Tabla de precios -->
-                    <table border="1" width="100%" cellpadding="5" cellspacing="0">
-                        <caption><b>Precios de Entradas</b></caption>
-                        <tr bgcolor="#ddd">
+            <!-- Tabla para escritorio -->
+            <div class="tabla-wrapper">
+                <table class="tabla-cronograma">
+                    <caption class="caption-cronograma">Precios de Entradas</caption>
+                    <thead>
+                        <tr>
                             <th>Día</th>
                             <th>Tipo</th>
                             <th>Precio</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <tr>
-                            <td align="center">16,17,18/05/2025</td>
-                            <td align="center">General</td>
-                            <td align="center">$15.000</td>
+                            <td>16,17,18/05/2025</td>
+                            <td>General</td>
+                            <td>$15.000</td>
                         </tr>
                         <tr>
-                            <td align="center">16,17,18/05/2025</td>
-                            <td align="center">Platea</td>
-                            <td align="center">$25.000</td>
+                            <td>16,17,18/05/2025</td>
+                            <td>Platea</td>
+                            <td>$25.000</td>
                         </tr>
                         <tr>
-                            <td align="center">16,17,18/05/2025</td>
-                            <td align="center">Vip</td>
-                            <td align="center">$40.000</td>
+                            <td>16,17,18/05/2025</td>
+                            <td>Vip</td>
+                            <td>$40.000</td>
                         </tr>
                         <tr>
-                            <td align="center" rowspan="3">Abono 3 días</td>
-                            <td align="center">GENERAL</td>
-                            <td align="center">$40.000</td>
+                            <td rowspan="3">Abono 3 días</td>
+                            <td>General</td>
+                            <td>$40.000</td>
+                        </tr>
                         <tr>
+                            <td>Platea</td>
+                            <td>$65.000</td>
+                        </tr>
+                        <tr>
+                            <td>Vip</td>
+                            <td>$110.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                            <td align="center">PLATEA</td>
-                            <td align="center">$65.000</td>
-                        </tr>
-        </tr>
-        <tr>
+            <!-- Cards para móviles -->
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="fecha">16,17,18/05/2025</div>
+                    <div class="tipo">General</div>
+                    <div class="precio">$15.000</div>
+                </div>
+                <div class="card">
+                    <div class="fecha">16,17,18/05/2025</div>
+                    <div class="tipo">Platea</div>
+                    <div class="precio">$25.000</div>
+                </div>
+                <div class="card">
+                    <div class="fecha">16,17,18/05/2025</div>
+                    <div class="tipo">Vip</div>
+                    <div class="precio">$40.000</div>
+                </div>
+                <div class="card">
+                    <div class="fecha">Abono 3 días</div>
+                    <div class="tipo">General</div>
+                    <div class="precio">$40.000</div>
+                </div>
+                <div class="card">
+                    <div class="fecha">Abono 3 días</div>
+                    <div class="tipo">Platea</div>
+                    <div class="precio">$65.000</div>
+                </div>
+                <div class="card">
+                    <div class="fecha">Abono 3 días</div>
+                    <div class="tipo">Vip</div>
+                    <div class="precio">$110.000</div>
+                </div>
+            </div>
 
-            <td align="center">VIP</td>
-            <td align="center">$110.000</td>
-        </tr>
-    </table>
-    </font>
-    </td>
-    </tr>
-    </table>
+        </section>
+    </main>
 
     <!-- Pie de página -->
-    <footer style="text-align: center; margin-top: 30px; padding: 20px; background-color: #333333; color: #ffffff;">
-        <p style="font-family: Arial; font-weight: bold;">¡Seguinos en nuestras redes sociales!</p>
-        <img src="../img/facebook.png" alt="Facebook" width="30" style="margin: 0 10px;">
-        <img src="../img/instagram.png" alt="Instagram" width="30" style="margin: 0 10px;">
-        <img src="../img/tik-tok.png" alt="Tik-tok" width="30" style="margin: 0 10px;">
-        <img src="../img/youtube.png" alt="YouTube" width="30" style="margin: 0 10px;">
-        <p style="font-family: Arial;">&copy; 2025 Sonidos de Mi Ciudad. Todos los derechos reservados.</p>
+    <footer>
+        <div id="footer-component"></div>
     </footer>
 </body>
 

@@ -1,0 +1,93 @@
+.contenedor-cronograma {
+  width: 90%;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-cronograma {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.tabla-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.tabla-cronograma {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tabla-cronograma th,
+.tabla-cronograma td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.05em;
+}
+
+.tabla-cronograma th {
+  background-color: #f2c078;
+  color: #000;
+}
+
+.tabla-cronograma tr:hover {
+  background-color: #fff3e6;
+}
+
+.red-icon {
+  width: 30px;
+  margin: 0 10px;
+}
+.caption-cronograma {
+  caption-side: top;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: #CC0000;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-bottom: 2px solid #cc0000;
+}
+.tabla-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.tabla-cronograma {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.tabla-cronograma th,
+.tabla-cronograma td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.caption-cronograma {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #cc0000;
+}
+
+.contenedor-cronograma {
+      animation: fadeInDown 2s ease;
+}   

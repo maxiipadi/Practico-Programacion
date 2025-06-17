@@ -2,83 +2,92 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/contacto.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="icon" href="/img/1.png" type="image/png">
-    <script src="/JS/components.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/contacto.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="/img/1.png" type="image/png" />
+  <script src="/JS/components.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div id="main-banner">
-            <h1 class="animate__animated animate__bounce">Contacto</h1>
-        </div>
-    </header>
+  <!-- Encabezado -->
+  <header>
+    <div id="main-banner">
+      <h1>Contacto</h1>
+    </div>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="/index.html">INICIO</a></li>
-            <li><a href="/templates/artistas.html">ARTISTAS</a></li>
-            <li><a href="/templates/cronograma.html">CRONOGRAMA</a></li>
-            <li><a href="/templates/entradas.html">ENTRADAS</a></li>
-            <li><a href="/templates/ubicacion.html">UBICACIÓN</a></li>
-            <li><a href="/templates/contacto.html">CONTACTO</a></li>
-        </ul>
-    </nav>
+  <!-- Menú de navegación -->
+  <nav >
+    <ul>
+      <li><a href="/index.html">INICIO</a></li>
+      <li><a href="/templates/artistas.html">ARTISTAS</a></li>
+      <li><a href="/templates/cronograma.html">CRONOGRAMA</a></li>
+      <li><a href="/templates/entradas.html">ENTRADAS</a></li>
+      <li><a href="/templates/ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="/templates/contacto.html">CONTACTO</a></li>
+    </ul>
+  </nav>
 
-    <main class="container">
-        <section class="contact-info">
-            <p>¿Querés comunicarte? <a href="#formulario">Ir al formulario</a></p>
-            <p>O escribinos directamente por <a href="mailto:info@sonidosmiCiudad.com">correo electrónico</a></p>
-            <p>También podés contactarnos por <a href="https://wa.me/543874123456" target="_blank">WhatsApp</a> o <a href="tel:+543874123456">llamarnos</a>.</p>
-            <p>Para comprar tus entradas online hacé clic en <a href="https://www.ticketsfolklore.com.ar" target="_blank">TicketsFolklore.com.ar</a></p>
-        </section>
+  <!-- Contenido principal -->
+  <main>
+    <section class="contenedor-cronograma">
+      <h2 class="titulo-cronograma">¿Querés comunicarte con nosotros?</h2>
 
-        <section id="formulario" class="contact-form">
-            <h2>Formulario de Contacto</h2>
-            <p>¿Tenés alguna duda, consulta o sugerencia? ¡Escribinos! Completá el formulario y nos pondremos en contacto.</p>
+      <div class="contact-info">
+        <p>Podés completar el <a href="#formulario">formulario</a>, o escribirnos directamente por <a href="mailto:info@sonidosmiCiudad.com">correo electrónico</a>.</p>
+        <p>También podés contactarnos por <a href="https://wa.me/543874123456" target="_blank">WhatsApp</a> o <a href="tel:+543874123456">llamarnos</a>.</p>
+        <p>Para comprar tus entradas online hacé clic en <a href="https://www.ticketsfolklore.com.ar" target="_blank">TicketsFolklore.com.ar</a></p>
+      </div>
 
-            <form action="submit_form.php" method="POST">
-                <fieldset>
-                    <legend><b>Datos del contacto</b></legend>
+      <section id="formulario" class="contact-form">
+        <h2 class="titulo-cronograma">Formulario de Contacto</h2>
+        <p>¿Tenés alguna duda, consulta o sugerencia? ¡Escribinos!</p>
 
-                    <div class="form-group">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
+        <form action="submit_form.php" method="POST">
+          <fieldset>
+            <legend><b>Datos del contacto</b></legend>
 
-                    <div class="form-group">
-                        <label for="apellido">Apellido:</label>
-                        <input type="text" id="apellido" name="apellido" required>
-                    </div>
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required>
+            </div>
 
-                    <div class="form-group">
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
+            <div class="form-group">
+              <label for="apellido">Apellido:</label>
+              <input type="text" id="apellido" name="apellido" required>
+            </div>
 
-                    <div class="form-group">
-                        <label for="asunto">Asunto:</label>
-                        <input type="text" id="asunto" name="asunto">
-                    </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
 
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribí tu mensaje aquí..."></textarea>
-                    </div>
+            <div class="form-group">
+              <label for="asunto">Asunto:</label>
+              <input type="text" id="asunto" name="asunto">
+            </div>
 
-                    <button type="submit">Enviar</button>
-                </fieldset>
-            </form>
-        </section>
-    </main>
+            <div class="form-group">
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribí tu mensaje aquí..."></textarea>
+            </div>
 
+            <button type="submit">Enviar</button>
+          </fieldset>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+ <footer>
     <div id="footer-component"></div>
+  </footer>
 </body>
-
 </html>
