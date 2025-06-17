@@ -21,71 +21,81 @@
         </div>
     </header>
 
-    <!-- Navegación -->
-    <nav>
-        <ul>
-            <li><a href="/index.html">INICIO</a></li>
-            <li><a href="/templates/artistas.html">ARTISTAS</a></li>
-            <li><a href="/templates/cronograma.html">CRONOGRAMA</a></li>
-            <li><a href="/templates/entradas.html">ENTRADAS</a></li>
-            <li><a href="/templates/ubicacion.html">UBICACIÓN</a></li>
-            <li><a href="/templates/contacto.html">CONTACTO</a></li>
-        </ul>
-    </nav>
+  <!-- Navegación -->
+  <nav role="navigation" aria-label="Menú principal">
+    <ul>
+      <li><a href="/index.html">INICIO</a></li>
+      <li><a href="/templates/artistas.html">ARTISTAS</a></li>
+      <li><a href="/templates/cronograma.html">CRONOGRAMA</a></li>
+      <li><a href="/templates/entradas.html">ENTRADAS</a></li>
+      <li><a href="/templates/ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="/templates/contacto.html">CONTACTO</a></li>
+    </ul>
+  </nav>
 
-    <main>
-        <!-- Sección del Video -->
-        <div align="center" class="animate__animated animate__zoomIn animate__delay-2s">
-            <iframe src="https://www.youtube.com/embed/grdJtVx1NQU"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-        <!-- Contenido principal -->
-        <section class="animate__animated animate__fadeInUp animate__delay-3s">
-            <p>Un encuentro vibrante que celebra la riqueza del folklore argentino, uniendo a talentosos artistas
-                populares de todo el país. En esta fiesta de la tradición, la música, la danza y las historias de
-                nuestra tierra se entrelazan para honrar nuestras raíces y compartir la pasión por nuestra cultura
-                Santiagueña.</p>
+  <main>
+    <section id="video-destacado">
+  <div class="contenedor-video" class="animate__animated animate__zoomIn animate__delay-2s">
+    <iframe src="https://www.youtube.com/embed/grdJtVx1NQU?si=o0suD9Y92fR9S9nI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+    <!-- Contenido principal -->
+    <section>
+      <p>Un encuentro vibrante que celebra la riqueza del folklore argentino, uniendo a talentosos artistas
+        populares de todo el país. En esta fiesta de la tradición, la música, la danza y las historias de
+        nuestra tierra se entrelazan para honrar nuestras raíces y compartir la pasión por nuestra cultura
+        Santiagueña.</p>
+      
+      <br>
+
+      <p><strong>¡Te esperamos para vivir juntos la magia de Sonidos de Mi Ciudad!</strong></p>
+
+        <!-- Sección con float, relative, absolute y transform -->
+    <!-- <section class="bloque-flotante">
+      <div class="caja-relativa">
+        <img src="img/poster.jpg" alt="Imagen flotante" class="img-flotante" />
+        <span class="etiqueta">DESTACADO</span>
+      </div>
+      <p>Póster oficial del festival, edición 2025.</p>
+    </section> -->
+
+
+      <img src="img/poster.jpg" alt="Afiche del festival Sonidos de mi Ciudad" width="50%" />
 
             <br>
-
-            <p><strong>¡Te esperamos para vivir juntos la magia de Sonidos de Mi Ciudad!</strong></p>
-
-            <br>
-
-            <img src="img/poster.jpg" alt="Festival" width="40%">
-
-            >
-
-            <p>Únete a nosotros en un evento único que celebrará la cultura folklórica argentina en la Madre de
+      
+                <p>Únete a nosotros en un evento único que celebrará la cultura folklórica argentina en la Madre de
                 Ciudades.</p>
-            <br>
-            <div class="fila">
-                <div class="columna-izq">
-                    <h4>🪗 Historia del Festival</h4>
-                    <p>Este evento nació para homenajear a los músicos populares y promover la cultura folklórica entre
-                        las nuevas generaciones.</p>
-                </div> <br>
 
-                <div class="columna-der">
-                    <img src="/img/historia.jpg" alt="Historia del festival" width="100%">
-                </div>
-            </div>
-            <br>
-            
-            <h3>🎤 Artistas principales:</h3>
-            <ul>
-                <li>🎵 DUO COPLANACU</li>
-                <li>🎵 LOS MANSEROS SANTIAGUEÑOS</li>
-                <li>🎵 ABEL PINTOS</li>
-            </ul>
-        </section>
-    </main>
-    <!-- Redes Sociales -->
+  <div class="columna-der">
+    <img src="/img/historia.jpg" alt="Historia del festival" width="100%">
+  </div>
+</div>
+<br>
 
+      <p>Únete a nosotros en un evento único que celebrará la cultura folklórica argentina en la Madre de
+        Ciudades.</p>
+      <p><strong>📅 Fechas: 16, 17 y 18 de Mayo 2025</strong></p>
+      <p><strong>📍 Lugar: PLAZA AÑORANZAS</strong></p>
+
+      <h3>🎤 Artistas principales:</h3>
+      <ul>
+        <li>🎵 DUO COPLANACU</li>
+        <li>🎵 LOS MANSEROS SANTIAGUEÑOS</li>
+        <li>🎵 ABEL PINTOS</li>
+      </ul>
+    </section>
+  </main>
+  <!-- Pie de página -->
+  <footer>
     <div id="footer-component"></div>
-
+  </footer>
 </body>
 
 </html>

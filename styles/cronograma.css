@@ -2,54 +2,34 @@
   width: 90%;
   margin: 30px auto;
   background: #ffffff;
-  padding: 20px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.titulo-cronograma {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #ffffff;
-  text-align: center;
-}
-
+/* Tabla cronograma */
 .tabla-wrapper {
   overflow-x: auto;
-  margin-top: 20px;
-}
-
-.tabla-cronograma {
   width: 100%;
-  border-collapse: collapse;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
 }
-
+.tabla-cronograma {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
+}
 .tabla-cronograma th,
 .tabla-cronograma td {
-  border: 1px solid #ddd;
-  padding: 15px;
-  text-align: center;
-  font-size: 1.05em;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
 }
 
-.tabla-cronograma th {
-  background-color: #f2c078;
-  color: #000;
-}
-
-.tabla-cronograma tr:hover {
-  background-color: #fff3e6;
-}
-
-.red-icon {
-  width: 30px;
-  margin: 0 10px;
-}
+/* Caption  */
 .caption-cronograma {
   caption-side: top;
   font-size: 1.8rem;
@@ -61,6 +41,60 @@
   padding: 0.5rem;
   border-bottom: 2px solid #cc0000;
 }
+
+/* Cards grid (oculto en desktop por defecto) */
+.cards-grid {
+  display: none;
+  width: 100%;
+  gap: 1rem;
+}
+
+/* Tarjeta individual */
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+.card .fecha {
+  font-weight: bold;
+  color: #CC0000;
+}
+
+/* Responsive móvil (≤600px) */
+@media (max-width: 600px) {
+  .tabla-wrapper {
+    display: none;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .titulo-cronograma {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    font-size: 0.85rem;
+    padding: 0.75rem;
+  }
+}
+
+/* Responsive tablets y laptops pequeñas (≤992px) */
+@media (max-width: 992px) {
+  .tabla-cronograma th,
+  .tabla-cronograma td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
 .tabla-wrapper {
   overflow-x: auto;
   width: 100%;
@@ -87,7 +121,3 @@
   text-align: center;
   color: #cc0000;
 }
-
-.contenedor-cronograma {
-      animation: fadeInDown 2s ease;
-}   

@@ -50,6 +50,7 @@
   width: 30px;
   margin: 0 10px;
 }
+
 .caption-cronograma {
   caption-side: top;
   font-size: 1.8rem;
@@ -91,3 +92,4 @@
 .contenedor-cronograma {
       animation: fadeInDown 2s ease;
 }
+
