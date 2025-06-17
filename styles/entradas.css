@@ -46,50 +46,11 @@
   background-color: #fff3e6;
 }
 
-.menu-sticky {
-  background-color: #f2c078;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  text-align: center;
-}
-
-.menu-sticky ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-sticky li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.menu-sticky a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-.menu-sticky a:hover {
-  background-color: #cc0000;
-  color: white;
-  padding: 5px 10px;
-}
-
-footer {
-    text-align: center;
-    margin-top: 10px;
-    padding: 20px;
-    background-color: #c1dbb3;
-    color: #000000;
-}
-
 .red-icon {
   width: 30px;
   margin: 0 10px;
 }
+
 .caption-cronograma {
   caption-side: top;
   font-size: 1.8rem;
@@ -127,3 +88,8 @@ footer {
   text-align: center;
   color: #cc0000;
 }
+
+.contenedor-cronograma {
+      animation: fadeInDown 2s ease;
+}
+

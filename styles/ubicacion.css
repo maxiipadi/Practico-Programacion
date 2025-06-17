@@ -1,19 +1,3 @@
-.contenedor-cronograma {
-  width: 90%;
-  margin: 30px auto;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.titulo-cronograma {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #333;
-  text-align: center;
-}
-
 .mapa-ubicacion {
   margin: 30px auto;
   text-align: center;
@@ -22,49 +6,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Menu sticky */
-.menu-sticky {
-  background-color: #f2c078;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  text-align: center;
-}
 
-.menu-sticky ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-sticky li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.menu-sticky a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-.menu-sticky a:hover {
-  background-color: #cc0000;
-  color: white;
-  padding: 5px 10px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 10px;
-    padding: 20px;
-    background-color: #c1dbb3;
-    color: #000000;
-}
-
-.red-icon {
-  width: 30px;
-  margin: 0 10px;
+main {
+        animation: fadeInUp 2s ease;
 }

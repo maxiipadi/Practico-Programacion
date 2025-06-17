@@ -39,6 +39,7 @@
 
 .form-group {
   margin-bottom: 15px;
+
 }
 
 label {
@@ -62,6 +63,16 @@ textarea {
   resize: vertical;
 }
 
+
+main {
+        animation: fadeInUp 2s ease;
+}
+
+
+textarea {
+  resize: vertical;
+}
+
 button {
   background-color: #cc0000;
   color: white;
@@ -76,49 +87,3 @@ button:hover {
   background-color: #a30000;
 }
 
-/* Menú Sticky */
-.menu-sticky {
-  background-color: #f2c078;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  text-align: center;
-}
-
-.menu-sticky ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-sticky li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.menu-sticky a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-.menu-sticky a:hover {
-  background-color: #cc0000;
-  color: white;
-  padding: 5px 10px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 10px;
-    padding: 20px;
-    background-color: #c1dbb3;
-    color: #000000;
-}
-
-.red-icon {
-  width: 30px;
-  margin: 0 10px;
-}
