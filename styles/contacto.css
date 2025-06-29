@@ -87,3 +87,27 @@ button:hover {
   background-color: #a30000;
 }
 
+#btn-top {
+  all: unset;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+
+#btn-top img.icono-volver {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+#btn-top:hover img.icono-volver {
+  transform: scale(1.1);
+}
