@@ -1,12 +1,33 @@
 /* Paleta de colores utilizada:
    Fuente: https://colorhunt.co/palette/faedcaf2c078fe5d25cc0000
-   Colores:
-   - #FAEDCA (Fondo general)
-   - #F2C078 (Nav)
-   - #FE5D25 (Header)
-   - #CC0000 (Botones y banners)
 */
 
+/* 1. DEFINICIÓN DE VARIABLES DE COLOR */
+:root {
+  --color-fondo: #FAEDCA;
+  --color-nav: #F2C078;
+  --color-header: #FE5D25;
+  --color-botones: #CC0000;
+  --color-seccion: #ffffff;
+  --color-texto-principal: #000000;
+  --color-texto-header: #ffffff;
+  --color-texto-nav: #000000; /* Texto del nav más oscuro para mejor contraste */
+  --color-footer: #c1dbb3;
+}
+
+body.dark-mode {
+  --color-fondo: #2c2c2c;
+  --color-nav: #3a3a3a;
+  --color-header: #a0401a;
+  --color-botones: #e57373;
+  --color-seccion: #424242;
+  --color-texto-principal: #f5f5f5;
+  --color-texto-header: #ffffff;
+  --color-texto-nav: #f5f5f5;
+  --color-footer: #3a3a3a;
+}
+
+/* 2. APLICACIÓN DE VARIABLES A TUS ESTILOS */
 html {
   scroll-behavior: smooth;
 }
@@ -18,22 +39,24 @@ html {
 }
 
 body {
-  background-color: #faedca;
-  color: #000000;
+  background-color: var(--color-fondo);
+  color: var(--color-texto-principal);
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
 header {
-  background-color: #fe5d25;
-  color: #ffffff;
+  background-color: var(--color-header);
+  color: var(--color-texto-header);
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 header h1 {
@@ -47,10 +70,9 @@ header h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   margin: 20px auto;
   padding: 1.5rem 5%;
-  background-color: #cc0000;
+  background-color: var(--color-botones);
   color: white;
   border-radius: 12px;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
@@ -66,18 +88,17 @@ header h1 {
   font-size: 1.2em;
 }
 
-
 nav {
-  background-color: #f2c078;
+  background-color: var(--color-nav);
   padding: 0.6em;
   display: flex;
   justify-content: center;
   position: sticky;
   top: 0;
   z-index: 1000;
-  /* <-- importante para que quede encima del contenido */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   animation: fadeInDown 2s ease;
+  transition: background-color 0.3s ease;
 }
 
 nav ul {
@@ -91,7 +112,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #fdf6e3;
+  color: var(--color-texto-nav);
   text-decoration: none;
   padding: 0.6em 1.2em;
   transition: background 0.3s ease, color 0.3s ease;
@@ -100,8 +121,8 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
-  background-color: #CC0000;
-  color: #fdf6e3;
+  background-color: var(--color-botones);
+  color: #ffffff; /* Mantenemos blanco para el hover sobre el botón */
 }
 
 main {
@@ -111,11 +132,12 @@ main {
 section {
   width: 90%;
   margin: 20px auto;
-  background-color: #ffffff;
+  background-color: var(--color-seccion);
   padding: 1em;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 section.img {
@@ -386,9 +408,11 @@ footer {
   text-align: center;
   margin-top: 10px;
   padding: 1.25em;
-  background-color: #c1dbb3;
-  color: #000000;
+  background-color: var(--color-footer);
+  color: var(--color-texto-principal);
+  transition: background-color 0.3s ease;
 }
+
 #btn-top {
   position: fixed;
   bottom: 20px;
