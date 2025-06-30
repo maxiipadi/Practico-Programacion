@@ -284,7 +284,7 @@ iframe {
   padding: 2rem 1rem;
   display: flex;
   justify-content: center;
-    animation: zoomIn 2s ease;
+  animation: zoomIn 2s ease;
 }
 
 .contenedor-video {
