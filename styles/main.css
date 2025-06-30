@@ -470,16 +470,75 @@ footer {
   right: 10px;
 }
 
+/* Móvil */
 @media (max-width: 600px) {
+  .aside {
+    display: none;
+  }
+
+  header,
+  main,
+  footer {
+    flex-direction: column;
+  }
+
+  nav { /* Agregamos un padding vertical más generoso para la navegación en móvil */
+    padding: 0.8em 0.6em; /* Aumenta el padding vertical del nav */
+  }
+
   nav ul {
-    flex-direction: column; /* Apila los elementos verticalmente en móviles */
-    align-items: center; /* Centra los elementos */
+    flex-direction: column;
+    align-items: center;
     gap: 0; /* Quita el gap entre items al apilarlos verticalmente */
   }
 
   nav ul li {
     width: 100%; /* Hace que cada ítem ocupe todo el ancho disponible */
     text-align: center; /* Centra el texto dentro de cada ítem */
-    margin-bottom: 0.5rem; /* Agrega un pequeño margen inferior para separarlos */
+    /* Agrega un margen inferior para separar los elementos de la lista verticalmente */
+    margin-bottom: 0.8rem; /* Ajusta este valor si necesitas más o menos espacio */
+  }
+
+  nav ul li:last-child {
+    margin-bottom: 0; /* Elimina el margen inferior del último ítem para que no haya espacio extra al final */
+  }
+
+  nav ul li a {
+    padding: 0.8em 0; /* Aumenta el padding vertical del enlace para hacerlo más alto y clicable */
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  img.social {
+    width: 24px;
+  }
+
+  #main-banner {
+    padding: 1rem;
+  }
+
+  .columna-izq,
+  .columna-der {
+    float: none;
+    width: 100%;
+  }
+
+  .redes {
+    gap: 1rem;
+  }
+
+  .social {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
   }
 }
