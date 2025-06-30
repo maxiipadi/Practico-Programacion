@@ -90,17 +90,12 @@ nav ul {
   margin: 0;
 }
 
-
-nav ul li {
-  display: block;
-  margin-bottom: 10px;
-}
-
 nav ul li a {
   color: #fdf6e3;
   text-decoration: none;
-  padding: 0.6em 0.6em;
+  padding: 0.6em 1.2em;
   transition: background 0.3s ease, color 0.3s ease;
+  display: block;
 }
 
 nav ul li a:hover,
@@ -475,3 +470,16 @@ footer {
   right: 10px;
 }
 
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* Apila los elementos verticalmente en móviles */
+    align-items: center; /* Centra los elementos */
+    gap: 0; /* Quita el gap entre items al apilarlos verticalmente */
+  }
+
+  nav ul li {
+    width: 100%; /* Hace que cada ítem ocupe todo el ancho disponible */
+    text-align: center; /* Centra el texto dentro de cada ítem */
+    margin-bottom: 0.5rem; /* Agrega un pequeño margen inferior para separarlos */
+  }
+}
