@@ -11,7 +11,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="/img/1.png" type="image/png" />
     <script src="/JS/components.js"></script>
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+      const { jsPDF } = window.jspdf;
+    </script>
+    <script defer src="/JS/components.js"></script>
+    <!-- compra de entradas -->
+    <script defer src="/JS/compraEntradas.js"></script>
+    <!-- Generación de PDF -->
+    <script defer src="/JS/generarPDF.js"></script>
+
+  </head>
 
 <body>
     <!-- Encabezado -->
@@ -133,8 +143,85 @@
       </div>
 
     </section>
-  </main>
+    <section id="entradas">
+  <h2>Compra tus entradas</h2>
+  <form id="formEntradas">
+  <div class="entrada-item">
+    <input type="checkbox" class="entrada-checkbox" data-precio="15000" data-abono="false" value="General Día"> 
+    <span class="entrada-nombre">General Día - $15.000</span>
+      <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible>
+    <select class="entrada-dia" avalaible>
+      <option value="">Seleccionar día</option>
+      <option value="16/05/2025">16 de mayo</option>
+      <option value="17/05/2025">17 de mayo</option>
+      <option value="18/05/2025">18 de mayo</option>
+  </select>
+</div>
 
+    <div class="entrada-item">
+  <input type="checkbox" class="entrada-checkbox" data-precio="25000" value="Platea Día" />
+        Platea Día - $25.000
+  <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible>
+  <select class="entrada-dia" avalaible>
+    <option value="">Seleccionar día</option>
+    <option value="16/05/2025">16 de mayo</option>
+    <option value="17/05/2025">17 de mayo</option>
+    <option value="18/05/2025">18 de mayo</option>
+  </select>
+</div>
+  <div class="entrada-item">
+  <input type="checkbox" class="entrada-checkbox" data-precio="40000" value="VIP Día" />
+        VIP Día - $40.000
+  <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible>
+  <select class="entrada-dia" avalaible>
+    <option value="">Seleccionar día</option>
+    <option value="16/05/2025">16 de mayo</option>
+    <option value="17/05/2025">17 de mayo</option>
+    <option value="18/05/2025">18 de mayo</option>
+  </select>
+</div>
+
+
+
+    <div class="entrada-item">
+      <input type="checkbox" class="entrada-checkbox" data-precio="40000" data-abono="true" value="Abono 3 días - General"/>
+      <span class="entrada-nombre">Abono 3 días - General - $40.000</span>
+      <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible />
+    </div>
+
+    <div class="entrada-item">
+        <input type="checkbox" class="entrada-checkbox" data-precio="65000" data-abono="true" value="Abono 3 días - Platea" />
+        <span class="entrada-nombre">Abono 3 días - Platea - $65.000 </span>
+        <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible />
+    </div>
+
+    <div class="entrada-item">
+        <input type="checkbox" class="entrada-checkbox" data-precio="110000" data-abono="true" value="Abono 3 días - VIP" />
+        <span class="entrada-nombre">Abono 3 días - VIP - $110.000</span>
+        <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible />
+    </div>
+
+    <p><strong>Total: </strong><span id="total">$0</span></p>
+
+    <button type="button" id="btnConfirmar">Confirmar compra</button>
+    <button id="btnDescargarPDF" style="display:none; margin-top: 1rem;">Descargar entradas (PDF)</button>
+
+  </form>
+
+  <div id="resumenCompra" style="display:none; margin-top:20px;">
+    <h3>Resumen de compra</h3>
+    <ul id="listaResumen"></ul>
+    <p><strong>Total a pagar: </strong><span id="totalResumen"></span></p>
+    
+
+  </div>
+</section>
+
+    
+
+
+  </main>
+  
   <!-- Pie de página -->
   <footer>
     <div id="footer-component"></div>

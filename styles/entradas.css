@@ -92,4 +92,154 @@
 .contenedor-cronograma {
       animation: fadeInDown 2s ease;
 }
+#formEntradas {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  gap: 10px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
 
+#formEntradas label {
+  font-weight: bold;
+}
+
+#formEntradas input, #formEntradas select {
+  padding: 5px;
+  font-size: 1em;
+}
+
+#entradas {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  color: #333;
+}
+
+#entradas h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1a73e8;
+}
+
+.entrada-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.entrada-item label {
+  flex: 1;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #444;
+}
+
+.entrada-checkbox {
+  transform: scale(1.2);
+}
+
+.entrada-cantidad {
+  width: 60px;
+  padding: 0.4rem;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.entrada-cantidad:focus:not(:disabled) {
+  border-color: #1a73e8;
+  outline: none;
+}
+
+.entrada-cantidad:disabled {
+  background: #eee;
+  cursor: not-allowed;
+}
+
+#total {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1a73e8;
+}
+
+#btnConfirmar {
+  width: 100%;
+  background-color: #1a73e8;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btnConfirmar:hover {
+  background-color: #155ab6;
+}
+
+#resumenCompra {
+  background-color: #f0f4ff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: inset 0 0 6px #d0d9ff;
+  margin-top: 2rem;
+}
+
+#resumenCompra h3 {
+  margin-top: 0;
+  text-align: center;
+  color: #0d47a1;
+}
+
+#listaResumen {
+  list-style: none;
+  padding-left: 0;
+}
+
+#listaResumen li {
+  border-bottom: 1px solid #c5cdf9;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+#totalResumen {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1a73e8;
+  display: block;
+  text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .entrada-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .entrada-cantidad {
+    width: 100%;
+  }
+
+  #btnConfirmar {
+    font-size: 1rem;
+  }
+}
