@@ -13,6 +13,13 @@
   --color-texto-header: #ffffff;
   --color-texto-nav: #000000; /* Texto del nav más oscuro para mejor contraste */
   --color-footer: #c1dbb3;
+  --color-borde-tabla: #ddd;
+  --color-input-fondo: #fefefe;
+  --color-input-borde: #ccc;
+  --color-input-texto: #333;
+  --color-input-placeholder: #888;
+  --color-error: #cc0000;
+  --color-error-fondo: #ffe6e6;
 }
 
 body.dark-mode {
@@ -25,6 +32,13 @@ body.dark-mode {
   --color-texto-header: #ffffff;
   --color-texto-nav: #f5f5f5;
   --color-footer: #3a3a3a;
+  --color-borde-tabla: #555;
+  --color-input-fondo: #555;
+  --color-input-borde: #777;
+  --color-input-texto: #f5f5f5;
+  --color-input-placeholder: #bbb;
+  --color-error: #ff8a80;
+  --color-error-fondo: #5c1f1f;
 }
 
 /* 2. APLICACIÓN DE VARIABLES A TUS ESTILOS */

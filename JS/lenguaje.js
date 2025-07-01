@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             main_title_b: "Cronograma",
             main_title_c: "Ubicación",
             main_title_d: "Contacto",
+            main_title_e: "Entradas",
         },
         en: {
             // Navigation Menu
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             main_title_b: "Schedule",
             main_title_c: "Location",
             main_title_d: "Contact",
+            main_title_e: "Tickets",
         }
     };
 

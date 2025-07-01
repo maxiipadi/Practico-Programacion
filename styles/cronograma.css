@@ -1,7 +1,9 @@
+/* cronograma.css (CORREGIDO) */
+
 .contenedor-cronograma {
   width: 90%;
   margin: 30px auto;
-  background: #ffffff;
+  background-color: var(--color-seccion); /* <-- CAMBIO */
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -9,6 +11,7 @@
   gap: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 /* Tabla cronograma */
@@ -16,20 +19,23 @@
   overflow-x: auto;
   width: 100%;
 }
+
 .tabla-cronograma {
   border-collapse: collapse;
   width: 100%;
   min-width: 600px;
 }
+
 .tabla-cronograma th,
 .tabla-cronograma td {
   padding: 1rem;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--color-borde-tabla); /* <-- CAMBIO */
   font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-/* Caption  */
+/* Caption */
 .caption-cronograma {
   caption-side: top;
   font-size: 1.8rem;
@@ -51,7 +57,7 @@
 
 /* Tarjeta individual */
 .card {
-  background: #fff;
+  background-color: var(--color-seccion); /* <-- CAMBIO */
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -59,7 +65,10 @@
   grid-template-rows: repeat(4, auto);
   gap: 0.5rem;
   font-size: 0.9rem;
+  border: 1px solid var(--color-borde-tabla); /* <-- AÑADIDO para visibilidad */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
+
 .card .fecha {
   font-weight: bold;
   color: #CC0000;
@@ -70,16 +79,13 @@
   .tabla-wrapper {
     display: none;
   }
-
   .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-
   .titulo-cronograma {
     font-size: 1.5rem;
   }
-
   .card {
     font-size: 0.85rem;
     padding: 0.75rem;
@@ -93,31 +99,4 @@
     padding: 0.5rem;
     font-size: 0.9rem;
   }
-}
-
-.tabla-wrapper {
-  overflow-x: auto;
-  width: 100%;
-  margin-top: 2rem;
-}
-
-.tabla-cronograma {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 600px;
-}
-
-.tabla-cronograma th,
-.tabla-cronograma td {
-  padding: 1rem;
-  text-align: center;
-  border: 1px solid #ccc;
-}
-
-.caption-cronograma {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #cc0000;
 }

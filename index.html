@@ -1,161 +1,161 @@
-<!DOCTYPE html>
-<html lang="es">
+  <!DOCTYPE html>
+  <html lang="es">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sonidos de Mi Ciudad - Inicio</title>
-  <link rel="stylesheet" href="/styles/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="icon" href="/img/1.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
-  <script src="/JS/components.js"></script>
-  <script src="/JS/darkMode.js"></script>
-  <script src="/JS/lenguaje.js"></script>
-  <script src="/JS/cuentaRegresiva.js"></script>
-  <script src="/JS/animationScroll.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonidos de Mi Ciudad - Inicio</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" href="/img/1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <script src="/JS/components.js"></script>
+    <script src="/JS/darkMode.js"></script>
+    <script src="/JS/lenguaje.js"></script>
+    <script src="/JS/cuentaRegresiva.js"></script>
+    <script src="/JS/animationScroll.js"></script>
+  </head>
 
-<body>
-  <!-- Encabezado -->
-  <header>
-    <div id="main-banner">
-      <h1 data-i18n="main_title" class="animate__animated animate__bounce">Sonidos de Mi Ciudad</h1>
-    </div>
-  </header>
-
-  <!-- Navegación -->
-  <nav role="navigation" aria-label="Menú principal">
-    <ul>
-      <li><a href="/index.html" data-i18n="nav_inicio">INICIO</a></li>
-      <li><a href="/templates/artistas.html" data-i18n="nav_artistas">ARTISTAS</a></li>
-      <li><a href="/templates/cronograma.html" data-i18n="nav_cronograma">CRONOGRAMA</a></li>
-      <li><a href="/templates/entradas.html" data-i18n="nav_entradas">ENTRADAS</a></li>
-      <li><a href="/templates/ubicacion.html" data-i18n="nav_ubicacion">UBICACIÓN</a></li>
-      <li><a href="/templates/contacto.html" data-i18n="nav_contacto">CONTACTO</a></li>
-      <button id="darkModeToggle" title="Cambiar tema" aria-label="Activar modo oscuro o claro">
-        <i class="fas fa-moon"></i>
-        <button id="lang-toggle" title="Cambiar Idioma" aria-label="Switch language">
-          <span class="flag-icon"></span>
-        </button>
-    </ul>
-    </button>
-  </nav>
-
-  <br>
-  <br>
-  
-  <section id="cuenta-regresiva">
-    <h2>Faltan para el Festival</h2>
-
-    <div class="countdown-container" id="countdown">
-
-      <div class="tiempo"><span id="dias">00</span>
-        <p>Días</p>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <div id="main-banner">
+        <h1 data-i18n="main_title" class="animate__animated animate__bounce">Sonidos de Mi Ciudad</h1>
       </div>
-      <div class="tiempo"><span id="horas">00</span>
-        <p>Horas</p>
-      </div>
-      <div class="tiempo"><span id="minutos">00</span>
-        <p>Min</p>
-      </div>
-      <div class="tiempo"><span id="segundos">00</span>
-        <p>Seg</p>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <main>
+    <!-- Navegación -->
+    <nav role="navigation" aria-label="Menú principal">
+      <ul>
+        <li><a href="/index.html" data-i18n="nav_inicio">INICIO</a></li>
+        <li><a href="/templates/artistas.html" data-i18n="nav_artistas">ARTISTAS</a></li>
+        <li><a href="/templates/cronograma.html" data-i18n="nav_cronograma">CRONOGRAMA</a></li>
+        <li><a href="/templates/entradas.html" data-i18n="nav_entradas">ENTRADAS</a></li>
+        <li><a href="/templates/ubicacion.html" data-i18n="nav_ubicacion">UBICACIÓN</a></li>
+        <li><a href="/templates/contacto.html" data-i18n="nav_contacto">CONTACTO</a></li>
+        <button id="darkModeToggle" title="Cambiar tema" aria-label="Activar modo oscuro o claro">
+          <i class="fas fa-moon"></i>
+          <button id="lang-toggle" title="Cambiar Idioma" aria-label="Switch language">
+            <span class="flag-icon"></span>
+          </button>
+      </ul>
+      </button>
+    </nav>
+
+    <br>
+    <br>
     
-    <section id="video-destacado" class="animar-scroll">
-      <div class="contenedor-video">
-        <iframe src="https://www.youtube.com/embed/grdJtVx1NQU?si=o0suD9Y92fR9S9nI" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+    <section id="cuenta-regresiva">
+      <h2>Faltan para el Festival</h2>
+
+      <div class="countdown-container" id="countdown">
+
+        <div class="tiempo"><span id="dias">00</span>
+          <p>Días</p>
+        </div>
+        <div class="tiempo"><span id="horas">00</span>
+          <p>Horas</p>
+        </div>
+        <div class="tiempo"><span id="minutos">00</span>
+          <p>Min</p>
+        </div>
+        <div class="tiempo"><span id="segundos">00</span>
+          <p>Seg</p>
+        </div>
       </div>
     </section>
 
-    <!-- Contenido principal -->
-    <section>
-      <p>Un encuentro vibrante que celebra la riqueza del folklore argentino, uniendo a talentosos artistas
-        populares de todo el país. En esta fiesta de la tradición, la música, la danza y las historias de
-        nuestra tierra se entrelazan para honrar nuestras raíces y compartir la pasión por nuestra cultura
-        Santiagueña.</p>
-
-      <br>
-
-      <p><strong>¡Te esperamos para vivir juntos la magia de Sonidos de Mi Ciudad!</strong></p>
-
-
-      <br>
-      <section class="slider-evento animar-scroll">
-        <h2>📸 Galería del Festival</h2>
-        <div class="slider-container">
-          <button class="prev" aria-label="Anterior">&#10094;</button>
-          <div class="slider-track">
-            <img src="/img/foto1.jpg" alt="Foto 1 del festival">
-            <img src="/img/foto2.jpg" alt="Foto 2 del festival">
-            <img src="/img/foto3.jpg" alt="Foto 3 del festival">
-            <img src="/img/foto4.jpg" alt="Foto 4 del festival">
-          </div>
-          <button class="next" aria-label="Siguiente">&#10095;</button>
+    <main>
+      
+      <section id="video-destacado" class="animar-scroll">
+        <div class="contenedor-video">
+          <iframe src="https://www.youtube.com/embed/grdJtVx1NQU?si=o0suD9Y92fR9S9nI" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </div>
       </section>
 
+      <!-- Contenido principal -->
+      <section>
+        <p>Un encuentro vibrante que celebra la riqueza del folklore argentino, uniendo a talentosos artistas
+          populares de todo el país. En esta fiesta de la tradición, la música, la danza y las historias de
+          nuestra tierra se entrelazan para honrar nuestras raíces y compartir la pasión por nuestra cultura
+          Santiagueña.</p>
 
-      <img src="img/poster.jpg" alt="Afiche del festival" width="50%" class="animar-scroll" />
+        <br>
 
-      <br>
+        <p><strong>¡Te esperamos para vivir juntos la magia de Sonidos de Mi Ciudad!</strong></p>
 
-      <p>Únete a nosotros en un evento único que celebrará la cultura folklórica argentina en la Madre de
-        Ciudades.</p>
 
-      <br>
-      <p>Únete a nosotros en un evento único que celebrará la cultura folklórica argentina en la Madre de
-        Ciudades.</p>
-      <p><strong>📅 Fechas: 16, 17 y 18 de Mayo 2025</strong></p>
-      <p><strong>📍 Lugar: PLAZA AÑORANZAS</strong></p>
+        <br>
+        <section class="slider-evento animar-scroll">
+          <h2>📸 Galería del Festival</h2>
+          <div class="slider-container">
+            <button class="prev" aria-label="Anterior">&#10094;</button>
+            <div class="slider-track">
+              <img src="/img/foto1.jpg" alt="Foto 1 del festival">
+              <img src="/img/foto2.jpg" alt="Foto 2 del festival">
+              <img src="/img/foto3.jpg" alt="Foto 3 del festival">
+              <img src="/img/foto4.jpg" alt="Foto 4 del festival">
+            </div>
+            <button class="next" aria-label="Siguiente">&#10095;</button>
+          </div>
+        </section>
 
-      <h3>🎤 Artistas principales:</h3>
-      <ul>
-        <li>🎵 DUO COPLANACU</li>
-        <li>🎵 LOS MANSEROS SANTIAGUEÑOS</li>
-        <li>🎵 ABEL PINTOS</li>
-      </ul>
-    </section>
 
-    <section id="mapa-navegacion" style="text-align: center; margin-top: 50px;">
-      <h2>🗺️ Mapa de Navegación de la App</h2>
-      <p>Visualizá cómo están organizadas las secciones del sitio:</p>
+        <img src="img/poster.jpg" alt="Afiche del festival" width="50%" class="animar-scroll" />
 
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 30px;">
-        <a href="/index.html" style="font-size: 1.3em;">🏠 INICIO</a>
-        <span>↓</span>
-        <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
-          <a href="/templates/artistas.html">🎤 ARTISTAS</a>
-          <a href="/templates/cronograma.html">📅 CRONOGRAMA</a>
-          <a href="/templates/entradas.html">🎟️ ENTRADAS</a>
-          <a href="/templates/ubicacion.html">📍 UBICACIÓN</a>
-          <a href="/templates/contacto.html">📬 CONTACTO</a>
+        <br>
+
+        <p>Únete a nosotros en un evento único que celebrará la cultura folklórica argentina en la Madre de
+          Ciudades.</p>
+
+        <br>
+        <p>Únete a nosotros en un evento único que celebrará la cultura folklórica argentina en la Madre de
+          Ciudades.</p>
+        <p><strong>📅 Fechas: 16, 17 y 18 de Mayo 2025</strong></p>
+        <p><strong>📍 Lugar: PLAZA AÑORANZAS</strong></p>
+
+        <h3>🎤 Artistas principales:</h3>
+        <ul>
+          <li>🎵 DUO COPLANACU</li>
+          <li>🎵 LOS MANSEROS SANTIAGUEÑOS</li>
+          <li>🎵 ABEL PINTOS</li>
+        </ul>
+      </section>
+
+      <section id="mapa-navegacion" style="text-align: center; margin-top: 50px;">
+        <h2>🗺️ Mapa de Navegación de la App</h2>
+        <p>Visualizá cómo están organizadas las secciones del sitio:</p>
+
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 30px;">
+          <a href="/index.html" style="font-size: 1.3em;">🏠 INICIO</a>
+          <span>↓</span>
+          <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+            <a href="/templates/artistas.html">🎤 ARTISTAS</a>
+            <a href="/templates/cronograma.html">📅 CRONOGRAMA</a>
+            <a href="/templates/entradas.html">🎟️ ENTRADAS</a>
+            <a href="/templates/ubicacion.html">📍 UBICACIÓN</a>
+            <a href="/templates/contacto.html">📬 CONTACTO</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-  </main>
-  
-  <script src="/JS/cuentaRegresiva.js"></script>
-  
-
+    </main>
+    
+    <script src="/JS/cuentaRegresiva.js"></script>
+    
 
 
-  <!-- Pie de página -->
-  <footer>
-    <div id="footer-component"></div>
-  </footer>
-</body>
 
-</html>
+    <!-- Pie de página -->
+    <footer>
+      <div id="footer-component"></div>
+    </footer>
+  </body>
+
+  </html>
