@@ -100,3 +100,179 @@
     font-size: 0.9rem;
   }
 }
+
+/* ============================================= */
+/* ENTRADAS.CSS (CORREGIDO)             */
+/* ============================================= */
+
+/* Contenedor principal de la página de entradas */
+.contenedor-entradas {
+  width: 90%;
+  margin: 30px auto;
+  background-color: var(--color-seccion);
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  animation: fadeInDown 2s ease;
+}
+
+/* Títulos generales de la página */
+.titulo-seccion-entradas {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: var(--color-texto-principal);
+  text-align: center;
+}
+
+/* Tabla de precios de referencia */
+.tabla-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.tabla-precios {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-input-fondo);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tabla-precios th,
+.tabla-precios td {
+  border: 1px solid var(--color-borde-tabla);
+  padding: 15px;
+  text-align: center;
+  font-size: 1.05em;
+  transition: all 0.3s ease;
+}
+
+.tabla-precios th {
+  background-color: var(--color-nav);
+  color: var(--color-texto-nav);
+}
+
+.caption-precios {
+  caption-side: top;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-botones);
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+/* Formulario interactivo para comprar entradas */
+#entradas {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: var(--color-seccion);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  color: var(--color-texto-principal);
+  transition: background-color 0.3s ease;
+}
+
+#entradas h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-acento-entradas);
+}
+
+.entrada-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.entrada-item label, .entrada-nombre {
+  flex: 1;
+  font-weight: 500;
+  color: var(--color-texto-principal);
+}
+
+.entrada-cantidad, .entrada-dia {
+  width: 80px;
+  padding: 0.4rem;
+  font-size: 1rem;
+  border: 1.5px solid var(--color-input-borde);
+  background-color: var(--color-input-fondo);
+  color: var(--color-input-texto);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.entrada-cantidad:focus:not(:disabled),
+.entrada-dia:focus:not(:disabled) {
+  border-color: var(--color-acento-entradas);
+  outline: none;
+}
+
+.entrada-cantidad:disabled,
+.entrada-dia:disabled {
+  background-color: var(--color-borde-tabla);
+  cursor: not-allowed;
+}
+
+#total {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-acento-entradas);
+}
+
+#btnConfirmar {
+  width: 100%;
+  background-color: var(--color-acento-entradas);
+  border: none;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Resumen de la compra */
+#resumenCompra {
+  background-color: var(--color-resumen-fondo);
+  color: var(--color-texto-principal);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: none;
+  margin-top: 2rem;
+}
+
+#resumenCompra h3 {
+  margin-top: 0;
+  text-align: center;
+  color: var(--color-acento-entradas);
+}
+
+#listaResumen {
+  list-style: none;
+  padding-left: 0;
+}
+
+#listaResumen li {
+  border-bottom: 1px solid var(--color-resumen-borde);
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+#totalResumen {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-acento-entradas);
+  display: block;
+  text-align: center;
+}
