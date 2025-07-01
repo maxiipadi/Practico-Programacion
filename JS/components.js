@@ -76,3 +76,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", updateSlider);
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const tipo = document.getElementById('tipo');
+  const cantidad = document.getElementById('cantidad');
+  const total = document.getElementById('total');
+
+  function actualizarTotal() {
+    const precio = parseInt(tipo.selectedOptions[0].dataset.precio);
+    const cant = parseInt(cantidad.value);
+    total.textContent = `$${precio * cant}`;
+  }
+
+  tipo.addEventListener('change', actualizarTotal);
+  cantidad.addEventListener('input', actualizarTotal);
+});
+
