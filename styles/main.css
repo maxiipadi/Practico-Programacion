@@ -150,6 +150,7 @@ nav ul li a:focus {
 
 main {
   padding: 20px 0;
+  animation: fadeInUp 2s ease;
 }
 
 section {
