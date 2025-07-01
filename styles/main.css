@@ -20,6 +20,9 @@
   --color-input-placeholder: #888;
   --color-error: #cc0000;
   --color-error-fondo: #ffe6e6;
+  --color-acento-entradas: #1a73e8;
+  --color-resumen-fondo: #f0f4ff;
+  --color-resumen-borde: #c5cdf9;
 }
 
 body.dark-mode {
@@ -39,6 +42,9 @@ body.dark-mode {
   --color-input-placeholder: #bbb;
   --color-error: #ff8a80;
   --color-error-fondo: #5c1f1f;
+  --color-acento-entradas: #8ab4f8;
+  --color-resumen-fondo: #30384a;
+  --color-resumen-borde: #505a74;
 }
 
 /* 2. APLICACIÓN DE VARIABLES A TUS ESTILOS */

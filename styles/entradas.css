@@ -1,56 +1,41 @@
+/* cronograma.css (CORREGIDO) */
+
 .contenedor-cronograma {
   width: 90%;
   margin: 30px auto;
-  background: #ffffff;
-  padding: 20px;
+  background-color: var(--color-seccion); /* <-- CAMBIO */
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
-.titulo-cronograma {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #ffffff;
-  text-align: center;
-}
-
+/* Tabla cronograma */
 .tabla-wrapper {
   overflow-x: auto;
-  margin-top: 20px;
+  width: 100%;
 }
 
 .tabla-cronograma {
-  width: 100%;
   border-collapse: collapse;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  width: 100%;
+  min-width: 600px;
 }
 
 .tabla-cronograma th,
 .tabla-cronograma td {
-  border: 1px solid #ddd;
-  padding: 15px;
-  text-align: center;
-  font-size: 1.05em;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-borde-tabla); /* <-- CAMBIO */
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-.tabla-cronograma th {
-  background-color: #f2c078;
-  color: #000;
-}
-
-.tabla-cronograma tr:hover {
-  background-color: #fff3e6;
-}
-
-.red-icon {
-  width: 30px;
-  margin: 0 10px;
-}
-
+/* Caption */
 .caption-cronograma {
   caption-side: top;
   font-size: 1.8rem;
@@ -62,184 +47,56 @@
   padding: 0.5rem;
   border-bottom: 2px solid #cc0000;
 }
-.tabla-wrapper {
-  overflow-x: auto;
+
+/* Cards grid (oculto en desktop por defecto) */
+.cards-grid {
+  display: none;
   width: 100%;
-  margin-top: 2rem;
-}
-
-.tabla-cronograma {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 600px;
-}
-
-.tabla-cronograma th,
-.tabla-cronograma td {
-  padding: 1rem;
-  text-align: center;
-  border: 1px solid #ccc;
-}
-
-.caption-cronograma {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #cc0000;
-}
-
-.contenedor-cronograma {
-      animation: fadeInDown 2s ease;
-}
-#formEntradas {
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  gap: 10px;
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
-}
-
-#formEntradas label {
-  font-weight: bold;
-}
-
-#formEntradas input, #formEntradas select {
-  padding: 5px;
-  font-size: 1em;
-}
-
-#entradas {
-  max-width: 600px;
-  margin: 2rem auto;
-  font-family: 'Montserrat', sans-serif;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  color: #333;
-}
-
-#entradas h2 {
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #1a73e8;
-}
-
-.entrada-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
-.entrada-item label {
-  flex: 1;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #444;
-}
-
-.entrada-checkbox {
-  transform: scale(1.2);
-}
-
-.entrada-cantidad {
-  width: 60px;
-  padding: 0.4rem;
-  font-size: 1rem;
-  border: 1.5px solid #ccc;
-  border-radius: 6px;
-  text-align: center;
-}
-
-.entrada-cantidad:focus:not(:disabled) {
-  border-color: #1a73e8;
-  outline: none;
-}
-
-.entrada-cantidad:disabled {
-  background: #eee;
-  cursor: not-allowed;
-}
-
-#total {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #1a73e8;
-}
-
-#btnConfirmar {
-  width: 100%;
-  background-color: #1a73e8;
-  border: none;
-  padding: 0.9rem;
-  font-size: 1.1rem;
-  color: white;
-  font-weight: 600;
+/* Tarjeta individual */
+.card {
+  background-color: var(--color-seccion); /* <-- CAMBIO */
+  padding: 1rem;
   border-radius: 8px;
-  margin-top: 1.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--color-borde-tabla); /* <-- AÑADIDO para visibilidad */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-#btnConfirmar:hover {
-  background-color: #155ab6;
+.card .fecha {
+  font-weight: bold;
+  color: #CC0000;
 }
 
-#resumenCompra {
-  background-color: #f0f4ff;
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: inset 0 0 6px #d0d9ff;
-  margin-top: 2rem;
-}
-
-#resumenCompra h3 {
-  margin-top: 0;
-  text-align: center;
-  color: #0d47a1;
-}
-
-#listaResumen {
-  list-style: none;
-  padding-left: 0;
-}
-
-#listaResumen li {
-  border-bottom: 1px solid #c5cdf9;
-  padding: 0.5rem 0;
-  font-size: 1rem;
-}
-
-#totalResumen {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #1a73e8;
-  display: block;
-  text-align: center;
-}
-
-/* Responsivo */
-@media (max-width: 480px) {
-  .entrada-item {
-    flex-direction: column;
-    align-items: flex-start;
+/* Responsive móvil (≤600px) */
+@media (max-width: 600px) {
+  .tabla-wrapper {
+    display: none;
   }
-
-  .entrada-cantidad {
-    width: 100%;
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
+  .titulo-cronograma {
+    font-size: 1.5rem;
+  }
+  .card {
+    font-size: 0.85rem;
+    padding: 0.75rem;
+  }
+}
 
-  #btnConfirmar {
-    font-size: 1rem;
+/* Responsive tablets y laptops pequeñas (≤992px) */
+@media (max-width: 992px) {
+  .tabla-cronograma th,
+  .tabla-cronograma td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
   }
 }
