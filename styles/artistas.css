@@ -92,3 +92,37 @@
 .bloque-flotante:hover .info-hover {
   display: block;
 }
+/*-------------------------------------------*/
+
+.titulo-artistas{
+  text-align:center;font-size:2rem;margin:2rem 0;color:#222
+}
+
+/* CONTENEDOR PRINCIPAL */
+.grid-artistas{
+  display:flex;flex-direction:column;gap:2rem;align-items:center;
+  padding:2rem 1rem
+}
+
+/* TARJETA */
+.artista{
+  position:relative;width:90%;max-width:600px;cursor:pointer;
+  border-radius:12px;overflow:hidden;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);background:#fff;
+  transition:transform .25s;
+}
+.artista:hover{transform:scale(1.02)}
+.artista img{width:100%;display:block}
+
+/* BLOQUE OCULTO */
+.info-oculta{
+  position:absolute;inset:0;
+  background:rgba(204,0,0,.95);color:#fff;
+  padding:1.5rem;display:flex;flex-direction:column;gap:.8rem;
+  transform:translateY(100%);transition:transform .35s ease;
+}
+.artista.activa .info-oculta{transform:translateY(0)}
+
+.info-oculta h3{margin:0;font-size:1.4rem}
+.info-oculta p{margin:0;font-size:1rem;line-height:1.4}
+.info-oculta audio{width:100%}

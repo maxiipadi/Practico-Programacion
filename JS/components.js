@@ -75,3 +75,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", updateSlider);
 });
+// ==============================
+// Galería de artistas – info emergente
+// ==============================
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-artista]").forEach(card => {
+    card.addEventListener("click", () => {
+      // 1. Cerrar cualquier otra tarjeta abierta
+      document.querySelectorAll("[data-artista].activa")
+        .forEach(activa => activa !== card && activa.classList.remove("activa"));
+      // 2. Abrir/cerrar la seleccionada
+      card.classList.toggle("activa");
+    });
+  });
+});
