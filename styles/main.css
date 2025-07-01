@@ -1,12 +1,33 @@
 /* Paleta de colores utilizada:
    Fuente: https://colorhunt.co/palette/faedcaf2c078fe5d25cc0000
-   Colores:
-   - #FAEDCA (Fondo general)
-   - #F2C078 (Nav)
-   - #FE5D25 (Header)
-   - #CC0000 (Botones y banners)
 */
 
+/* 1. DEFINICIÓN DE VARIABLES DE COLOR */
+:root {
+  --color-fondo: #FAEDCA;
+  --color-nav: #F2C078;
+  --color-header: #FE5D25;
+  --color-botones: #CC0000;
+  --color-seccion: #ffffff;
+  --color-texto-principal: #000000;
+  --color-texto-header: #ffffff;
+  --color-texto-nav: #000000; /* Texto del nav más oscuro para mejor contraste */
+  --color-footer: #c1dbb3;
+}
+
+body.dark-mode {
+  --color-fondo: #2c2c2c;
+  --color-nav: #3a3a3a;
+  --color-header: #a0401a;
+  --color-botones: #e57373;
+  --color-seccion: #424242;
+  --color-texto-principal: #f5f5f5;
+  --color-texto-header: #ffffff;
+  --color-texto-nav: #f5f5f5;
+  --color-footer: #3a3a3a;
+}
+
+/* 2. APLICACIÓN DE VARIABLES A TUS ESTILOS */
 html {
   scroll-behavior: smooth;
 }
@@ -18,11 +39,12 @@ html {
 }
 
 body {
-  background-color: #faedca;
-  color: #000000;
+  background-color: var(--color-fondo);
+  color: var(--color-texto-principal);
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
 /*header {
@@ -35,14 +57,15 @@ body {
 
 }*/
 header {
-    background-color: #fe5d29;
-  color: #ffffff;
+  background-color: var(--color-header);
+  color: var(--color-texto-header);
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 header h1 {
@@ -56,10 +79,9 @@ header h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   margin: 20px auto;
   padding: 1.5rem 5%;
-  background-color: #cc0000;
+  background-color: var(--color-botones);
   color: white;
   border-radius: 12px;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
@@ -75,17 +97,17 @@ header h1 {
   font-size: 1.2em;
 }
 
-
 nav {
-  background-color: #f2c078;
-    padding: 10px;
+  background-color: var(--color-nav);
+  padding: 0.6em;
   display: flex;
   justify-content: center;
   position: sticky;
   top: 0;
-    z-index: 1000; /* <-- importante para que quede encima del contenido */
+  z-index: 1000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   animation: fadeInDown 2s ease;
+  transition: background-color 0.3s ease;
 }
 
 nav ul {
@@ -98,23 +120,18 @@ nav ul {
   margin: 0;
 }
 
-
-nav ul li {
-  display: block;
-  margin-bottom: 10px;
-}
-
 nav ul li a {
-  color: #fdf6e3;
+  color: var(--color-texto-nav);
   text-decoration: none;
-    padding: 10px 10px;
+  padding: 0.6em 1.2em;
   transition: background 0.3s ease, color 0.3s ease;
+  display: block;
 }
 
-
-nav ul li a:hover {
-  background-color: #CC0000;
-    color: #fdf6e3
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: var(--color-botones);
+  color: #ffffff; /* Mantenemos blanco para el hover sobre el botón */
 }
 
 main {
@@ -124,11 +141,12 @@ main {
 section {
     width: 80%;
   margin: 20px auto;
-  background-color: #ffffff;
-    padding: 20px;
+  background-color: var(--color-seccion);
+  padding: 1em;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 section.img {
@@ -316,7 +334,7 @@ iframe {
   padding: 2rem 1rem;
   display: flex;
   justify-content: center;
-    animation: zoomIn 2s ease;
+  animation: zoomIn 2s ease;
 }
 
 .contenedor-video {
@@ -604,4 +622,326 @@ iframe {
   .entrada-dia {
     width: 100%;
   }
+}
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+  padding: 1.25em;
+  background-color: var(--color-footer);
+  color: var(--color-texto-principal);
+  transition: background-color 0.3s ease;
+}
+
+#btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+
+#btn-top img.icono-volver {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+#btn-top:hover img.icono-volver {
+  transform: scale(1.1);
+}
+
+
+.slider-evento {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.slider-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-track img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slider-container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(204, 0, 0, 0.8);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.slider-container button:hover {
+  background-color: rgba(170, 0, 0, 0.9);
+}
+
+.slider-container .prev {
+  left: 10px;
+}
+
+.slider-container .next {
+  right: 10px;
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .aside {
+    display: none;
+  }
+
+  header,
+  main,
+  footer {
+    flex-direction: column;
+  }
+
+  nav { /* Agregamos un padding vertical más generoso para la navegación en móvil */
+    padding: 0.8em 0.6em; /* Aumenta el padding vertical del nav */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0; /* Quita el gap entre items al apilarlos verticalmente */
+  }
+
+  nav ul li {
+    width: 100%; /* Hace que cada ítem ocupe todo el ancho disponible */
+    text-align: center; /* Centra el texto dentro de cada ítem */
+    /* Agrega un margen inferior para separar los elementos de la lista verticalmente */
+    margin-bottom: 0.8rem; /* Ajusta este valor si necesitas más o menos espacio */
+  }
+
+  nav ul li:last-child {
+    margin-bottom: 0; /* Elimina el margen inferior del último ítem para que no haya espacio extra al final */
+  }
+
+  nav ul li a {
+    padding: 0.8em 0; /* Aumenta el padding vertical del enlace para hacerlo más alto y clicable */
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  img.social {
+    width: 24px;
+  }
+
+  #main-banner {
+    padding: 1rem;
+  }
+
+  .columna-izq,
+  .columna-der {
+    float: none;
+    width: 100%;
+  }
+
+  .redes {
+    gap: 1rem;
+  }
+
+  .social {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+  }
+}
+
+#cuenta-regresiva {
+  text-align: center;
+  margin: 5px auto;
+  padding: 20px;
+  background-color: #CC0000;
+  color: #fff;
+  border-radius: 12px;
+  max-width: 600px;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.countdown-container .tiempo {
+  background-color: #333;
+  padding: 15px 20px;
+  border-radius: 8px;
+  width: 100px;
+}
+
+.countdown-container span {
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+  color: #58a6ff;
+}
+
+.countdown-container p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+#darkModeToggle i {
+  transition: transform 0.4s ease-in-out, color 0.3s ease;
+}
+
+/* Cuando el ícono del sol aparezca, rotará */
+#darkModeToggle .fa-sun {
+  transform: rotate(90deg);
+}
+
+/* Cuando vuelva la luna, vuelve a la posición original */
+#darkModeToggle .fa-moon {
+  transform: rotate(0deg);
+}
+
+/* main.css */
+
+#darkModeToggle {
+  background: transparent;
+  border: none; /* Quitamos el borde por defecto */
+  color: var(--color-texto-nav); /* Usamos la variable de color del texto del nav */
+  font-size: 1.5rem; /* Hacemos el ícono un poco más grande */
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%; /* Lo hacemos circular */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Un sutil fondo al pasar el mouse */
+}
+
+/* En modo oscuro, el hover puede ser sobre blanco */
+body.dark-mode #darkModeToggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#lang-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem; /* Tamaño de la bandera */
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#lang-toggle .flag-icon {
+  border-radius: 4px; /* Bordes redondeados para la bandera */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Estado inicial: oculto y movido hacia abajo */
+.animar-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Estado final: visible y en su posición original */
+.animar-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tooltip {
+  position: relative; /* Contenedor para el tip */
+  cursor: help;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+/* El cuadro del tip (oculto por defecto) */
+.tooltip::before {
+  content: attr(data-tooltip); /* Toma el texto del atributo data-tooltip */
+  position: absolute;
+  bottom: 150%; /* Lo posiciona arriba del ícono */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap; /* Evita que el texto se parta en varias líneas */
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* La flecha del tip (oculta por defecto) */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Muestra el tip al pasar el mouse sobre el ícono */
+.tooltip:hover::before,
+.tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
 }

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const countdownEl = document.getElementById("countdown");
   if (!countdownEl) return; // Si no está presente en la página, no hace nada
 
-  const fechaObjetivo = new Date("2025-06-30T23:59:00").getTime();
+  const fechaObjetivo = new Date("2025-07-30T23:59:00").getTime();
 
   const intervalo = setInterval(() => {
     const ahora = new Date().getTime();

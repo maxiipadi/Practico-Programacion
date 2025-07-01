@@ -8,51 +8,64 @@
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/ubicacion.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="/img/1.png" type="image/png" />
     <script src="/JS/components.js"></script>
+    <script src="/JS/darkMode.js"></script>
+    <script src="/JS/lenguaje.js"></script>
 </head>
 
 <body>
     <!-- Encabezado -->
     <header>
         <div id="main-banner">
-            <h1>Ubicación</h1>
+          <h1 data-i18n="main_title_c">Ubicación</h1>
         </div>
     </header>
 
     <!-- Navegación -->
     <nav>
         <ul>
-            <li><a href="/index.html">INICIO</a></li>
-            <li><a href="/templates/artistas.html">ARTISTAS</a></li>
-            <li><a href="/templates/cronograma.html">CRONOGRAMA</a></li>
-            <li><a href="/templates/entradas.html">ENTRADAS</a></li>
-            <li><a href="/templates/ubicacion.html">UBICACIÓN</a></li>
-            <li><a href="/templates/contacto.html">CONTACTO</a></li>
+          <li><a href="/index.html" data-i18n="nav_inicio">INICIO</a></li>
+          <li><a href="/templates/artistas.html" data-i18n="nav_artistas">ARTISTAS</a></li>
+          <li><a href="/templates/cronograma.html" data-i18n="nav_cronograma">CRONOGRAMA</a></li>
+          <li><a href="/templates/entradas.html" data-i18n="nav_entradas">ENTRADAS</a></li>
+          <li><a href="/templates/ubicacion.html" data-i18n="nav_ubicacion">UBICACIÓN</a></li>
+          <li><a href="/templates/contacto.html" data-i18n="nav_contacto">CONTACTO</a></li>
+          <button id="darkModeToggle" title="Cambiar tema" aria-label="Activar modo oscuro o claro">
+            <i class="fas fa-moon"></i>
+            <button id="lang-toggle" title="Cambiar Idioma" aria-label="Switch language">
+              <span class="flag-icon"></span>
+            </button>
         </ul>
     </nav>
 
   <!-- Contenido -->
   <main>
-    <section class="contenedor-cronograma">
-      <h2 class="titulo-cronograma">¿Dónde se realiza el Festival Sonidos de Mi Ciudad?</h2>
+  <section class="contenedor-cronograma">
+    <h2 class="titulo-cronograma">📍 Ubicación del Festival</h2>
 
-      <p>El festival tendrá lugar en el <strong>Anfiteatro Plaza Añoranzas</strong>, uno de los espacios más emblemáticos de Santiago del Estero.</p>
+    <p>El festival tendrá lugar en el <strong>Anfiteatro Plaza Añoranzas</strong>, uno de los espacios más emblemáticos de Santiago del Estero.
+      <span class="tooltip" data-tooltip="¡No olvides tu DNI para ingresar!">
+        <i class="fas fa-id-card"></i>
+      </p>
 
-      <p>A continuación te compartimos el mapa interactivo para que puedas llegar fácilmente:</p>
+    <p>A continuación te compartimos el mapa interactivo para que puedas llegar fácilmente:</p>
 
-      <div class="mapa-ubicacion">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.7325625697845!2d-64.24320751712763!3d-27.783556929211638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b521df1533411%3A0xf7fde3057075c1dd!2sPlaza%20A%C3%B1oranzas!5e1!3m2!1ses-419!2sar!4v1747014483464!5m2!1ses-419!2sar"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
-      </div>
+    <div class="mapa-ubicacion">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.7325625697845!2d-64.24320751712763!3d-27.783556929211638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b521df1533411%3A0xf7fde3057075c1dd!2sPlaza%20A%C3%B1oranzas!5e1!3m2!1ses-419!2sar!4v1747014483464!5m2!1ses-419!2sar"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        title="Ubicación en Google Maps - Plaza Añoranzas">
+      </iframe>
+    </div>
 
-      <p><strong>Dirección:</strong> Av. Costanera & Dr. Alberto Diaz, Santiago del Estero, Argentina.</p>
-    </section>
-  </main>
+    <p><strong>Dirección:</strong> Av. Costanera & Dr. Alberto Díaz, Santiago del Estero, Argentina.</p>
+  </section>
+</main>
+
 
   <!-- Pie de página -->
  <footer>
