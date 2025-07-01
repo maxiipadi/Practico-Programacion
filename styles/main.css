@@ -566,3 +566,162 @@ footer {
     font-size: 0.8rem;
   }
 }
+
+#cuenta-regresiva {
+  text-align: center;
+  margin: 5px auto;
+  padding: 20px;
+  background-color: #CC0000;
+  color: #fff;
+  border-radius: 12px;
+  max-width: 600px;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.countdown-container .tiempo {
+  background-color: #333;
+  padding: 15px 20px;
+  border-radius: 8px;
+  width: 100px;
+}
+
+.countdown-container span {
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+  color: #58a6ff;
+}
+
+.countdown-container p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+#darkModeToggle i {
+  transition: transform 0.4s ease-in-out, color 0.3s ease;
+}
+
+/* Cuando el ícono del sol aparezca, rotará */
+#darkModeToggle .fa-sun {
+  transform: rotate(90deg);
+}
+
+/* Cuando vuelva la luna, vuelve a la posición original */
+#darkModeToggle .fa-moon {
+  transform: rotate(0deg);
+}
+
+/* main.css */
+
+#darkModeToggle {
+  background: transparent;
+  border: none; /* Quitamos el borde por defecto */
+  color: var(--color-texto-nav); /* Usamos la variable de color del texto del nav */
+  font-size: 1.5rem; /* Hacemos el ícono un poco más grande */
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%; /* Lo hacemos circular */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Un sutil fondo al pasar el mouse */
+}
+
+/* En modo oscuro, el hover puede ser sobre blanco */
+body.dark-mode #darkModeToggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#lang-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem; /* Tamaño de la bandera */
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#lang-toggle .flag-icon {
+  border-radius: 4px; /* Bordes redondeados para la bandera */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Estado inicial: oculto y movido hacia abajo */
+.animar-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Estado final: visible y en su posición original */
+.animar-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tooltip {
+  position: relative; /* Contenedor para el tip */
+  cursor: help;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+/* El cuadro del tip (oculto por defecto) */
+.tooltip::before {
+  content: attr(data-tooltip); /* Toma el texto del atributo data-tooltip */
+  position: absolute;
+  bottom: 150%; /* Lo posiciona arriba del ícono */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap; /* Evita que el texto se parta en varias líneas */
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* La flecha del tip (oculta por defecto) */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Muestra el tip al pasar el mouse sobre el ícono */
+.tooltip:hover::before,
+.tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
