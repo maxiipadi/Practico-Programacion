@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Juego Folklórico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Trivia – Sonidos de Mi Ciudad</title>
+
+  <!-- Estilos generales y específicos -->
+  <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/juego-preguntas.css" />
+
+  <!-- Scripts -->
+  <script src="/JS/components.js" defer></script>
+  <script src="/JS/juego-preguntas.js" defer></script>
 </head>
+
 <body>
-
-  <section class="contenedor animate__animated animate__fadeIn">
-    <h1>✨ Juego Folklórico</h1>
-    
-    <div id="juego" class="caja-juego">
-      <div class="pregunta" id="pregunta"></div>
-      <div class="opciones" id="opciones"></div>
-      <div class="feedback" id="feedback"></div>
+  <header>
+    <div id="main-banner">
+      <h1>Trivia Folklórica</h1>
     </div>
+  </header>
 
-    <a href="/templates/artistas.html" class="volver">⬅️ Volver a Artistas</a>
-  </section>
+  <!-- NAV con enlace a TRIVIA -->
+  <nav>
+    <ul>
+      <li><a href="/index.html">INICIO</a></li>
+      <li><a href="/templates/artistas.html">ARTISTAS</a></li>
+      <li><a href="/templates/cronograma.html">CRONOGRAMA</a></li>
+      <li><a href="/templates/entradas.html">ENTRADAS</a></li>
+      <li><a href="/templates/ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="/templates/contacto.html">CONTACTO</a></li>
+      <li><a href="/templates/juego-preguntas.html">TRIVIA</a></li>
+    </ul>
+  </nav>
 
-  <script src="/JS/juego-preguntas.js"></script>
+  <main>
+    <section id="juego" class="juego-container"></section>
+  </main>
+
+  <footer>
+    <div id="footer-component"></div>
+  </footer>
 </body>
+
 </html>

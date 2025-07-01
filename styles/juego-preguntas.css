@@ -1,61 +1,20 @@
-body {
-  font-family: 'Montserrat', sans-serif;
+.juego-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #fff3e0;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
   text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(to bottom right, #fdfcfb, #e2d1c3);
-  color: #2c3e50;
 }
 
-h1 {
-  color: #b03a2e;
-  font-size: 2.2em;
-  margin-bottom: 30px;
+.juego-container h2 { margin-bottom: 1rem; }
+.juego-container button {
+  background:#cc0000;color:#fff;border:none;border-radius:8px;
+  padding:10px 20px;cursor:pointer;margin:8px;
 }
+.juego-container button:hover { background:#a30000; }
 
-.pregunta {
-  font-size: 1.5em;
-  margin-bottom: 25px;
-  color: #7c4d00;
-}
-
-.opciones button {
-  display: inline-block;
-  margin: 12px;
-  padding: 12px 24px;
-  font-size: 1em;
-  border-radius: 10px;
-  border: 2px solid #b03a2e;
-  background-color: #f9e4d4;
-  color: #2c3e50;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-}
-
-.opciones button:hover {
-  background-color: #fdebd0;
-  transform: scale(1.05);
-}
-
-.feedback {
-  margin-top: 20px;
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #117864;
-}
-
-.volver {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 12px 24px;
-  background-color: #7d3c98;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 1em;
-  transition: background 0.3s ease;
-}
-
-.volver:hover {
-  background-color: #884ea0;
-}
+.opciones button { display:block;width:80%;margin:10px auto; }
+.resultado { font-size:1.2rem;margin-top:1rem;font-weight:bold; }
+.ranking li { margin:4px 0; }
