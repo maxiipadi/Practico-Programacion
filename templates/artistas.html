@@ -33,6 +33,7 @@
       <li><a href="/templates/entradas.html" data-i18n="nav_entradas">ENTRADAS</a></li>
       <li><a href="/templates/ubicacion.html" data-i18n="nav_ubicacion">UBICACIÓN</a></li>
       <li><a href="/templates/contacto.html" data-i18n="nav_contacto">CONTACTO</a></li>
+      <li><a href="/templates/juego-preguntas.html" data-i18n="nav_trivia">TRIVIA</a></li>
       <button id="darkModeToggle" title="Cambiar tema" aria-label="Activar modo oscuro o claro">
         <i class="fas fa-moon"></i>
       <button id="lang-toggle" title="Cambiar Idioma" aria-label="Switch language">
@@ -46,55 +47,69 @@
 
   <div class="grid-artistas">
 
-    <!-- Coplanacu -->
-    <section class="artista">
-      <div class="caja-imagen">
-        <img src="/img/COPLANACU.jpg" alt="Dúo Coplanacu">
-        <div class="info-emergente">
-          <h3>Dúo Coplanacu</h3>
-          <p>Desde 1985, este dúo santiagueño se convirtió en emblema del folklore argentino. Recibieron el Konex de
-            Platino en 2005.</p>
+    <div class="grid-artistas">
+      <!-- Coplanacu -->
+      <article class="artista" data-artista>
+        <img src="/img/COPLANACU.jpg" alt="Dúo Coplanacu" />
+        <div class="info-oculta">
+          <h3>Dúo Coplanacu</h3>
+          <p>
+            Dúo Coplanacu es un grupo folclórico compuesto por Roberto Cantos
+            y Julio Paz, formado en 1985 en Córdoba, aunque ambos son oriundos
+            de Santiago del Estero. Referente de las Peñas Universitarias
+            siendo epicentro la provincia de Córdoba, Santiago del Estero,
+            Tucumán y Buenos Aires.
+          </p>
           <audio controls>
             <source src="/audios/duo_coplanacu.mp3" type="audio/mpeg" />
-            Tu navegador no soporta el elemento de audio.
           </audio>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- Manseros -->
-    <section class="artista">
-      <div class="caja-imagen">
-        <img src="/img/MANSEROS.jpg" alt="Los Manseros Santiagueños">
-        <div class="info-emergente">
-          <h3>Los Manseros Santiagueños</h3>
-          <p>Desde 1959, íconos de la chacarera y folklore del norte argentino. Una leyenda que sigue vigente en cada
-            festival.</p>
+      <!-- Manseros -->
+      <article class="artista" data-artista>
+        <img src="/img/MANSEROS.jpg" alt="Los Manseros Santiagueños" />
+        <div class="info-oculta">
+          <h3>Los Manseros Santiagueños</h3>
+          <p>
+            Los Manseros Santiagueños son un conjunto folclórico argentino que
+            surgió como dúo vocal en el año 1959, formado por Leocadio del
+            Carmen Torres y Onofre Paz que son los fundadores del conjunto.
+          </p>
           <audio controls>
             <source src="/audios/los_manseros.mp3" type="audio/mpeg" />
-            Tu navegador no soporta el elemento de audio.
           </audio>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- Abel Pintos -->
-    <section class="artista">
-      <div class="caja-imagen">
-        <img src="/img/ABEL.jpg" alt="Abel Pintos">
-        <div class="info-emergente">
-          <h3>Abel Pintos</h3>
-          <p>Uno de los artistas más premiados del país. Comenzó su carrera a los 13 años y ha cosechado discos de oro y
-            múltiples Gardel.</p>
+      <!-- Abel Pintos -->
+      <article class="artista" data-artista>
+        <img src="/img/ABEL.jpg" alt="Abel Pintos" />
+        <div class="info-oculta">
+          <h3>Abel Pintos</h3>
+          <p>
+            Abel Federico Pintos es un cantante, compositor y productor
+            argentino de pop latino.​ Comenzó su carrera musical a los siete
+            años, tras ser escuchado por Raúl Lavié en un homenaje a José de
+            San Martín realizado en su colegio.​
+          </p>
           <audio controls>
             <source src="/audios/abel_pintos.mp3" type="audio/mpeg" />
-            Tu navegador no soporta el elemento de audio.
           </audio>
         </div>
-      </div>
+      </article>
+    </div>
+
+    <section style="text-align: center; margin-top: 50px">
+      <p class="animate__animated animate__pulse animate__slow" style="font-size: 1.1em">
+        🧠 ¿Te animás a un desafío?
+        <a href="/templates/juego-preguntas.html" style="font-weight: bold; color: #d35400">
+          Jugá al juego de los Artistas folklóricos
+        </a>
+        y poné a prueba tu oído 🎶
+      </p>
     </section>
 
-  </div>
   </main>
 
   <footer>

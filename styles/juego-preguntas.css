@@ -1,0 +1,20 @@
+.juego-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #fff3e0;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+  text-align: center;
+}
+
+.juego-container h2 { margin-bottom: 1rem; }
+.juego-container button {
+  background:#cc0000;color:#fff;border:none;border-radius:8px;
+  padding:10px 20px;cursor:pointer;margin:8px;
+}
+.juego-container button:hover { background:#a30000; }
+
+.opciones button { display:block;width:80%;margin:10px auto; }
+.resultado { font-size:1.2rem;margin-top:1rem;font-weight:bold; }
+.ranking li { margin:4px 0; }
