@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sonidos de Mi Ciudad - Entradas</title>
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/entradas.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" href="/img/1.png" type="image/png" />
-    <script src="/JS/components.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script>
-      const { jsPDF } = window.jspdf;
-    </script>
-    <script defer src="/JS/components.js"></script>
-    <!-- compra de entradas -->
-    <script defer src="/JS/compraEntradas.js"></script>
-    <!-- Generación de PDF -->
-    <script defer src="/JS/generarPDF.js"></script>
-    <script src="/JS/darkMode.js"></script>
-    <script src="/JS/lenguaje.js"></script>
-    <script src="/JS/cuentaRegresiva.js"></script>
-  </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonidos de Mi Ciudad - Entradas</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/entradas.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="/img/1.png" type="image/png" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    const { jsPDF } = window.jspdf;
+  </script>
+  <script defer src="/JS/components.js"></script>
+  <!-- compra de entradas -->
+  <script defer src="/JS/compraEntradas.js"></script>
+  <!-- Generación de PDF -->
+  <script defer src="/JS/generarPDF.js"></script>
+  <script src="/JS/darkMode.js"></script>
+  <script src="/JS/lenguaje.js"></script>
+  <script src="/JS/cuentaRegresiva.js"></script>
+</head>
 
 <body>
-    <!-- Encabezado -->
-    <header>
-        <div id="main-banner">
-          <h1 data-i18n="main_title_e">Entradas</h1>
-        </div>
-    </header>
+  <!-- Encabezado -->
+  <header>
+    <div id="main-banner">
+      <h1 data-i18n="main_title_e" class="animate__animated animate__fadeInDown">Entradas</h1>
+    </div>
+  </header>
 
   <!-- Navegación -->
   <nav role="navigation" aria-label="Menú principal">
@@ -62,7 +62,8 @@
         <li><strong>Entrada VIP:</strong> Acceso preferencial, sectores exclusivos y beneficios adicionales.</li>
       </ul>
 
-      <p><strong>Formas de pago:</strong> Efectivo, tarjeta de crédito/débito (Visa, Mastercard, Tarjeta Sol), transferencia bancaria.</p>
+      <p><strong>Formas de pago:</strong> Efectivo, tarjeta de crédito/débito (Visa, Mastercard, Tarjeta Sol),
+        transferencia bancaria.</p>
 
       <p><strong>¿Dónde comprar?</strong></p>
       <ul>
@@ -152,84 +153,87 @@
 
     </section>
     <section id="entradas">
-  <h2>Compra tus entradas</h2>
-  <form id="formEntradas">
-  <div class="entrada-item">
-    <input type="checkbox" class="entrada-checkbox" data-precio="15000" data-abono="false" value="General Día"> 
-    <span class="entrada-nombre">General Día - $15.000</span>
-      <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible>
-    <select class="entrada-dia" avalaible>
-      <option value="">Seleccionar día</option>
-      <option value="16/05/2025">16 de mayo</option>
-      <option value="17/05/2025">17 de mayo</option>
-      <option value="18/05/2025">18 de mayo</option>
-  </select>
-</div>
+      <h2>Compra tus entradas</h2>
+      <form id="formEntradas">
+        <div class="entrada-item">
+          <input type="checkbox" class="entrada-checkbox" data-precio="15000" data-abono="false" value="General Día">
+          <span class="entrada-nombre">General Día - $15.000</span>
+          <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible>
+          <select class="entrada-dia" avalaible>
+            <option value="">Seleccionar día</option>
+            <option value="16/05/2025">16 de mayo</option>
+            <option value="17/05/2025">17 de mayo</option>
+            <option value="18/05/2025">18 de mayo</option>
+          </select>
+        </div>
 
-    <div class="entrada-item">
-  <input type="checkbox" class="entrada-checkbox" data-precio="25000" value="Platea Día" />
-        Platea Día - $25.000
-  <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible>
-  <select class="entrada-dia" avalaible>
-    <option value="">Seleccionar día</option>
-    <option value="16/05/2025">16 de mayo</option>
-    <option value="17/05/2025">17 de mayo</option>
-    <option value="18/05/2025">18 de mayo</option>
-  </select>
-</div>
-  <div class="entrada-item">
-  <input type="checkbox" class="entrada-checkbox" data-precio="40000" value="VIP Día" />
-        VIP Día - $40.000
-  <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible>
-  <select class="entrada-dia" avalaible>
-    <option value="">Seleccionar día</option>
-    <option value="16/05/2025">16 de mayo</option>
-    <option value="17/05/2025">17 de mayo</option>
-    <option value="18/05/2025">18 de mayo</option>
-  </select>
-</div>
+        <div class="entrada-item">
+          <input type="checkbox" class="entrada-checkbox" data-precio="25000" value="Platea Día">
+          <span class="entrada-nombre">Platea Día - $25.000</span>
+          <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible>
+          <select class="entrada-dia" avalaible>
+            <option value="">Seleccionar día</option>
+            <option value="16/05/2025">16 de mayo</option>
+            <option value="17/05/2025">17 de mayo</option>
+            <option value="18/05/2025">18 de mayo</option>
+          </select>
+        </div>
+        <div class="entrada-item">
+          <input type="checkbox" class="entrada-checkbox" data-precio="40000" value="VIP Día" />
+          <span class="entrada-nombre">VIP Día - $40.000</span>
+          <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible>
+          <select class="entrada-dia" avalaible>
+            <option value="">Seleccionar día</option>
+            <option value="16/05/2025">16 de mayo</option>
+            <option value="17/05/2025">17 de mayo</option>
+            <option value="18/05/2025">18 de mayo</option>
+          </select>
+        </div>
 
 
 
-    <div class="entrada-item">
-      <input type="checkbox" class="entrada-checkbox" data-precio="40000" data-abono="true" value="Abono 3 días - General"/>
-      <span class="entrada-nombre">Abono 3 días - General - $40.000</span>
-      <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible />
-    </div>
+        <div class="entrada-item">
+          <input type="checkbox" class="entrada-checkbox" data-precio="40000" data-abono="true"
+            value="Abono 3 días - General" />
+          <span class="entrada-nombre">Abono 3 días - General - $40.000</span>
+          <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible />
+        </div>
 
-    <div class="entrada-item">
-        <input type="checkbox" class="entrada-checkbox" data-precio="65000" data-abono="true" value="Abono 3 días - Platea" />
-        <span class="entrada-nombre">Abono 3 días - Platea - $65.000 </span>
-        <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible />
-    </div>
+        <div class="entrada-item">
+          <input type="checkbox" class="entrada-checkbox" data-precio="65000" data-abono="true"
+            value="Abono 3 días - Platea" />
+          <span class="entrada-nombre">Abono 3 días - Platea - $65.000 </span>
+          <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible />
+        </div>
 
-    <div class="entrada-item">
-        <input type="checkbox" class="entrada-checkbox" data-precio="110000" data-abono="true" value="Abono 3 días - VIP" />
-        <span class="entrada-nombre">Abono 3 días - VIP - $110.000</span>
-        <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible />
-    </div>
+        <div class="entrada-item">
+          <input type="checkbox" class="entrada-checkbox" data-precio="110000" data-abono="true"
+            value="Abono 3 días - VIP" />
+          <span class="entrada-nombre">Abono 3 días - VIP - $110.000</span>
+          <input type="number" class="entrada-cantidad" min="1" max="10" value="1" avalaible />
+        </div>
 
-    <p><strong>Total: </strong><span id="total">$0</span></p>
+        <p><strong>Total: </strong><span id="total">$0</span></p>
 
-    <button type="button" id="btnConfirmar">Confirmar compra</button>
-    <button id="btnDescargarPDF" style="display:none; margin-top: 1rem;">Descargar entradas (PDF)</button>
+        <button type="button" id="btnConfirmar">Confirmar compra</button>
+        <button id="btnDescargarPDF" style="display:none; margin-top: 1rem;">Descargar entradas (PDF)</button>
 
-  </form>
+      </form>
 
-  <div id="resumenCompra" style="display:none; margin-top:20px;">
-    <h3>Resumen de compra</h3>
-    <ul id="listaResumen"></ul>
-    <p><strong>Total a pagar: </strong><span id="totalResumen"></span></p>
-    
+      <div id="resumenCompra" style="display:none; margin-top:20px;">
+        <h3>Resumen de compra</h3>
+        <ul id="listaResumen"></ul>
+        <p><strong>Total a pagar: </strong><span id="totalResumen"></span></p>
 
-  </div>
-</section>
 
-    
+      </div>
+    </section>
+
+
 
 
   </main>
-  
+
   <!-- Pie de página -->
   <footer>
     <div id="footer-component"></div>
