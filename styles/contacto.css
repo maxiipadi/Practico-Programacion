@@ -204,3 +204,24 @@ textarea:focus::placeholder {
 #btn-top:hover img.icono-volver {
   transform: scale(1.1);
 }
+
+/* Estilos para la sección de información de contacto */
+.contact-info {
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6; /* Mejora la legibilidad */
+}
+
+/* La clave está aquí: darle color a los links */
+.contact-info a {
+  color: var(--color-botones); /* Usa el color de acento principal */
+  font-weight: bold;
+  text-decoration: none; /* Opcional: quita el subrayado por defecto */
+  transition: opacity 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el link */
+.contact-info a:hover {
+  opacity: 0.8;
+  text-decoration: underline; /* Opcional: añade el subrayado en el hover */
+}

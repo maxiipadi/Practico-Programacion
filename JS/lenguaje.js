@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_entradas: "ENTRADAS",
             nav_ubicacion: "UBICACIÓN",
             nav_contacto: "CONTACTO",
+            nav_trivia: "TRIVIA",
             // Títulos
             main_title: "Sonidos de Mi Ciudad",
             main_title_a: "Artistas",
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_entradas: "TICKETS",
             nav_ubicacion: "LOCATION",
             nav_contacto: "CONTACT",
+            nav_trivia: "TRIVIA",
             // Titles
             main_title: "Sounds of My City",
             main_title_a: "Artists",

@@ -3,18 +3,53 @@
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 12px;
-  background: #fff3e0;
-  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+  background-color: var(--color-seccion); /* Usa la variable para el fondo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
-.juego-container h2 { margin-bottom: 1rem; }
+.juego-container h2 {
+  margin-bottom: 1rem;
+  color: var(--color-texto-principal); /* Usa la variable para el texto */
+}
+
+.juego-container p, .juego-container label {
+    color: var(--color-texto-principal); /* Asegura que todos los textos cambien */
+}
+
+/* Estilo para los botones dentro del juego */
 .juego-container button {
-  background:#cc0000;color:#fff;border:none;border-radius:8px;
-  padding:10px 20px;cursor:pointer;margin:8px;
+  background-color: var(--color-botones); /* Usa la variable para el fondo del botón */
+  color: var(--color-texto-header); /* Usa la variable para el texto del botón */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 8px;
+  transition: background-color 0.3s ease;
 }
-.juego-container button:hover { background:#a30000; }
 
-.opciones button { display:block;width:80%;margin:10px auto; }
-.resultado { font-size:1.2rem;margin-top:1rem;font-weight:bold; }
-.ranking li { margin:4px 0; }
+.juego-container button:hover {
+  opacity: 0.9;
+}
+
+/* Estilo para los botones de opciones de la trivia */
+.opciones button {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+}
+
+/* Estilos para el resultado y el ranking */
+.resultado {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--color-acento-entradas); /* Un color de acento para el resultado */
+}
+
+.ranking li {
+  margin: 4px 0;
+  color: var(--color-texto-principal);
+}
