@@ -1,56 +1,41 @@
+/* cronograma.css (CORREGIDO) */
+
 .contenedor-cronograma {
   width: 90%;
   margin: 30px auto;
-  background: #ffffff;
-  padding: 20px;
+  background-color: var(--color-seccion); /* <-- CAMBIO */
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
-.titulo-cronograma {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #ffffff;
-  text-align: center;
-}
-
+/* Tabla cronograma */
 .tabla-wrapper {
   overflow-x: auto;
-  margin-top: 20px;
+  width: 100%;
 }
 
 .tabla-cronograma {
-  width: 100%;
   border-collapse: collapse;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  width: 100%;
+  min-width: 600px;
 }
 
 .tabla-cronograma th,
 .tabla-cronograma td {
-  border: 1px solid #ddd;
-  padding: 15px;
-  text-align: center;
-  font-size: 1.05em;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-borde-tabla); /* <-- CAMBIO */
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-.tabla-cronograma th {
-  background-color: #f2c078;
-  color: #000;
-}
-
-.tabla-cronograma tr:hover {
-  background-color: #fff3e6;
-}
-
-.red-icon {
-  width: 30px;
-  margin: 0 10px;
-}
-
+/* Caption */
 .caption-cronograma {
   caption-side: top;
   font-size: 1.8rem;
@@ -62,34 +47,232 @@
   padding: 0.5rem;
   border-bottom: 2px solid #cc0000;
 }
+
+/* Cards grid (oculto en desktop por defecto) */
+.cards-grid {
+  display: none;
+  width: 100%;
+  gap: 1rem;
+}
+
+/* Tarjeta individual */
+.card {
+  background-color: var(--color-seccion); /* <-- CAMBIO */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--color-borde-tabla); /* <-- AÑADIDO para visibilidad */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card .fecha {
+  font-weight: bold;
+  color: #CC0000;
+}
+
+/* Responsive móvil (≤600px) */
+@media (max-width: 600px) {
+  .tabla-wrapper {
+    display: none;
+  }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .titulo-cronograma {
+    font-size: 1.5rem;
+  }
+  .card {
+    font-size: 0.85rem;
+    padding: 0.75rem;
+  }
+}
+
+/* Responsive tablets y laptops pequeñas (≤992px) */
+@media (max-width: 992px) {
+  .tabla-cronograma th,
+  .tabla-cronograma td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================= */
+/* ENTRADAS.CSS (CORREGIDO)             */
+/* ============================================= */
+
+/* Contenedor principal de la página de entradas */
+.contenedor-entradas {
+  width: 90%;
+  margin: 30px auto;
+  background-color: var(--color-seccion);
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  animation: fadeInDown 2s ease;
+}
+
+/* Títulos generales de la página */
+.titulo-seccion-entradas {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: var(--color-texto-principal);
+  text-align: center;
+}
+
+/* Tabla de precios de referencia */
 .tabla-wrapper {
   overflow-x: auto;
+  margin-top: 20px;
+}
+
+.tabla-precios {
   width: 100%;
+  border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-input-fondo);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tabla-precios th,
+.tabla-precios td {
+  border: 1px solid var(--color-borde-tabla);
+  padding: 15px;
+  text-align: center;
+  font-size: 1.05em;
+  transition: all 0.3s ease;
+}
+
+.tabla-precios th {
+  background-color: var(--color-nav);
+  color: var(--color-texto-nav);
+}
+
+.caption-precios {
+  caption-side: top;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-botones);
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+/* Formulario interactivo para comprar entradas */
+#entradas {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: var(--color-seccion);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  color: var(--color-texto-principal);
+  transition: background-color 0.3s ease;
+}
+
+#entradas h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-acento-entradas);
+}
+
+.entrada-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.entrada-item label, .entrada-nombre {
+  flex: 1;
+  font-weight: 500;
+  color: var(--color-texto-principal);
+}
+
+.entrada-cantidad, .entrada-dia {
+  width: 80px;
+  padding: 0.4rem;
+  font-size: 1rem;
+  border: 1.5px solid var(--color-input-borde);
+  background-color: var(--color-input-fondo);
+  color: var(--color-input-texto);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.entrada-cantidad:focus:not(:disabled),
+.entrada-dia:focus:not(:disabled) {
+  border-color: var(--color-acento-entradas);
+  outline: none;
+}
+
+.entrada-cantidad:disabled,
+.entrada-dia:disabled {
+  background-color: var(--color-borde-tabla);
+  cursor: not-allowed;
+}
+
+#total {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-acento-entradas);
+}
+
+#btnConfirmar {
+  width: 100%;
+  background-color: var(--color-acento-entradas);
+  border: none;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Resumen de la compra */
+#resumenCompra {
+  background-color: var(--color-resumen-fondo);
+  color: var(--color-texto-principal);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: none;
   margin-top: 2rem;
 }
 
-.tabla-cronograma {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 600px;
-}
-
-.tabla-cronograma th,
-.tabla-cronograma td {
-  padding: 1rem;
+#resumenCompra h3 {
+  margin-top: 0;
   text-align: center;
-  border: 1px solid #ccc;
+  color: var(--color-acento-entradas);
 }
 
-.caption-cronograma {
-  font-weight: bold;
+#listaResumen {
+  list-style: none;
+  padding-left: 0;
+}
+
+#listaResumen li {
+  border-bottom: 1px solid var(--color-resumen-borde);
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+#totalResumen {
+  font-weight: 700;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  color: var(--color-acento-entradas);
+  display: block;
   text-align: center;
-  color: #cc0000;
 }
-
-.contenedor-cronograma {
-      animation: fadeInDown 2s ease;
-}
-

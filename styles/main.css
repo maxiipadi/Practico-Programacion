@@ -1,12 +1,53 @@
 /* Paleta de colores utilizada:
    Fuente: https://colorhunt.co/palette/faedcaf2c078fe5d25cc0000
-   Colores:
-   - #FAEDCA (Fondo general)
-   - #F2C078 (Nav)
-   - #FE5D25 (Header)
-   - #CC0000 (Botones y banners)
 */
 
+/* 1. DEFINICIÓN DE VARIABLES DE COLOR */
+:root {
+  --color-fondo: #FAEDCA;
+  --color-nav: #F2C078;
+  --color-header: #FE5D25;
+  --color-botones: #CC0000;
+  --color-seccion: #ffffff;
+  --color-texto-principal: #000000;
+  --color-texto-header: #ffffff;
+  --color-texto-nav: #000000; /* Texto del nav más oscuro para mejor contraste */
+  --color-footer: #c1dbb3;
+  --color-borde-tabla: #ddd;
+  --color-input-fondo: #fefefe;
+  --color-input-borde: #ccc;
+  --color-input-texto: #333;
+  --color-input-placeholder: #888;
+  --color-error: #cc0000;
+  --color-error-fondo: #ffe6e6;
+  --color-acento-entradas: #1a73e8;
+  --color-resumen-fondo: #f0f4ff;
+  --color-resumen-borde: #c5cdf9;
+}
+
+body.dark-mode {
+  --color-fondo: #2c2c2c;
+  --color-nav: #3a3a3a;
+  --color-header: #a0401a;
+  --color-botones: #e57373;
+  --color-seccion: #424242;
+  --color-texto-principal: #f5f5f5;
+  --color-texto-header: #ffffff;
+  --color-texto-nav: #f5f5f5;
+  --color-footer: #3a3a3a;
+  --color-borde-tabla: #555;
+  --color-input-fondo: #555;
+  --color-input-borde: #777;
+  --color-input-texto: #f5f5f5;
+  --color-input-placeholder: #bbb;
+  --color-error: #ff8a80;
+  --color-error-fondo: #5c1f1f;
+  --color-acento-entradas: #8ab4f8;
+  --color-resumen-fondo: #30384a;
+  --color-resumen-borde: #505a74;
+}
+
+/* 2. APLICACIÓN DE VARIABLES A TUS ESTILOS */
 html {
   scroll-behavior: smooth;
 }
@@ -18,22 +59,33 @@ html {
 }
 
 body {
-  background-color: #faedca;
-  color: #000000;
+  background-color: var(--color-fondo);
+  color: var(--color-texto-principal);
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
+/*header {
+    background-color: #fe5d25;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+
+}*/
 header {
-  background-color: #fe5d25;
-  color: #ffffff;
+  background-color: var(--color-header);
+  color: var(--color-texto-header);
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 header h1 {
@@ -47,10 +99,9 @@ header h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   margin: 20px auto;
   padding: 1.5rem 5%;
-  background-color: #cc0000;
+  background-color: var(--color-botones);
   color: white;
   border-radius: 12px;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
@@ -66,18 +117,17 @@ header h1 {
   font-size: 1.2em;
 }
 
-
 nav {
-  background-color: #f2c078;
+  background-color: var(--color-nav);
   padding: 0.6em;
   display: flex;
   justify-content: center;
   position: sticky;
   top: 0;
   z-index: 1000;
-  /* <-- importante para que quede encima del contenido */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   animation: fadeInDown 2s ease;
+  transition: background-color 0.3s ease;
 }
 
 nav ul {
@@ -90,50 +140,43 @@ nav ul {
   margin: 0;
 }
 
-
-nav ul li {
-  display: block;
-  margin-bottom: 10px;
-}
-
 nav ul li a {
-  color: #fdf6e3;
+  color: var(--color-texto-nav);
   text-decoration: none;
-  padding: 0.6em 0.6em;
+  padding: 0.6em 1.2em;
   transition: background 0.3s ease, color 0.3s ease;
+  display: block;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-  background-color: #CC0000;
-  color: #fdf6e3;
+  background-color: var(--color-botones);
+  color: #ffffff; /* Mantenemos blanco para el hover sobre el botón */
 }
 
 main {
   padding: 20px 0;
+  animation: fadeInUp 2s ease;
 }
 
 section {
-  width: 90%;
+    width: 80%;
   margin: 20px auto;
-  background-color: #ffffff;
+  background-color: var(--color-seccion);
   padding: 1em;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 section.img {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   margin-top: 20px;
-  max-width: 100%;
-  height: auto;
 }
-
-section img:hover {
-  transform: scale(1.05) rotate(-1deg);
-  transition: transform 0.4s ease;
+video.section{
+    text-align: center;
 }
 
 ul {
@@ -146,7 +189,8 @@ img.social {
   width: 30px;
 }
 
-.social-icons {
+footer {
+    text-align: center;
   margin-top: 10px;
 }
 
@@ -193,20 +237,41 @@ iframe {
     display: none;
   }
 
-  header,
-  main,
-  footer {
+  header, main, footer {
     flex-direction: column;
   }
+}
 
+/* Tablet */
+@media (min-width: 800px) and (max-width: 991px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+/* PC Escritorio */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
   nav ul {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
   }
-
+}
+@media (max-width: 600px) {
   body {
     font-size: 14px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
   }
 
   section {
@@ -275,16 +340,22 @@ iframe {
     width: 90%;
   }
 }
+@media (max-width: 600px) {
+  #main-banner {
+    padding: 1rem;
+  }
 
-
-
+  header {
+    padding: 1rem;
+  }
+}
 #video-destacado {
-  width: 50%;
+  width: 100%;
   background-color: #ffffff;
   padding: 2rem 1rem;
   display: flex;
   justify-content: center;
-    animation: zoomIn 2s ease;
+  animation: zoomIn 2s ease;
 }
 
 .contenedor-video {
@@ -363,26 +434,213 @@ iframe {
     font-size: 0.8rem;
   }
 }
-
-body {
-  font-size: clamp(0.9rem, 2vw + 0.5rem, 1.1rem);
+#cuenta-regresiva {
+  text-align: center;
+  margin: 5px auto;
+  padding: 20px;
+  background-color: #CC0000;
+  color: #fff;
+  border-radius: 12px;
+  max-width: 600px;
 }
 
-
-iframe {
-  width: 90vw;
-  height: 50vw;
+.countdown-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
 }
 
-#main-banner {
-  padding: 1em 2em;
+.countdown-container .tiempo {
+  background-color: #333;
+  padding: 15px 20px;
+  border-radius: 8px;
+  width: 100px;
 }
 
+.countdown-container span {
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+  color: #58a6ff;
+}
+
+.countdown-container p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+/* Contenedor general */
+#entradas {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+/* Título */
+#entradas h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1a73e8;
+}
+
+/* Items entradas */
+.entrada-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+/* Label del checkbox y texto */
+.entrada-item label {
+  flex: 1;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #444;
+  user-select: none;
+}
+
+/* Checkbox estilizado */
+.entrada-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Input cantidad */
+.entrada-cantidad {
+  width: 60px;
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.entrada-cantidad:focus:not(:disabled) {
+  border-color: #1a73e8;
+  outline: none;
+  box-shadow: 0 0 6px #1a73e8aa;
+}
+
+.entrada-cantidad:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Total */
+#total {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #1a73e8;
+}
+
+/* Botón confirmar */
+#btnConfirmar {
+  margin-top: 1.8rem;
+  width: 100%;
+  background-color: #1a73e8;
+  border: none;
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  box-shadow: 0 3px 8px rgba(26,115,232,0.4);
+}
+
+#btnConfirmar:hover {
+  background-color: #155ab6;
+  box-shadow: 0 5px 14px rgba(21,90,182,0.6);
+}
+
+/* Resumen de compra */
+#resumenCompra {
+  background-color: #f0f4ff;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  box-shadow: inset 0 0 8px #d0d9ff;
+  margin-top: 2rem;
+  color: #0d1a66;
+}
+
+#resumenCompra h3 {
+  margin-top: 0;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#listaResumen {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+#listaResumen li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #c5cdf9;
+  font-size: 1rem;
+}
+
+#totalResumen {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1a73e8;
+  text-align: center;
+}
+#formEntradas {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.entrada-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.entrada-checkbox {
+  transform: scale(1.2);
+}
+
+.entrada-nombre {
+  font-size: 1rem;
+}
+
+.entrada-cantidad,
+.entrada-dia {
+  width: 80px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+/* Responsivo */
 @media (max-width: 600px) {
+  .entrada-item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
 
-  .columna-izq,
-  .columna-der {
-    float: none;
+  .entrada-cantidad,
+  .entrada-dia {
     width: 100%;
   }
 }
@@ -391,9 +649,11 @@ footer {
   text-align: center;
   margin-top: 10px;
   padding: 1.25em;
-  background-color: #c1dbb3;
-  color: #000000;
+  background-color: var(--color-footer);
+  color: var(--color-texto-principal);
+  transition: background-color 0.3s ease;
 }
+
 #btn-top {
   position: fixed;
   bottom: 20px;
@@ -475,3 +735,234 @@ footer {
   right: 10px;
 }
 
+/* Móvil */
+@media (max-width: 600px) {
+  .aside {
+    display: none;
+  }
+
+  header,
+  main,
+  footer {
+    flex-direction: column;
+  }
+
+  nav { /* Agregamos un padding vertical más generoso para la navegación en móvil */
+    padding: 0.8em 0.6em; /* Aumenta el padding vertical del nav */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0; /* Quita el gap entre items al apilarlos verticalmente */
+  }
+
+  nav ul li {
+    width: 100%; /* Hace que cada ítem ocupe todo el ancho disponible */
+    text-align: center; /* Centra el texto dentro de cada ítem */
+    /* Agrega un margen inferior para separar los elementos de la lista verticalmente */
+    margin-bottom: 0.8rem; /* Ajusta este valor si necesitas más o menos espacio */
+  }
+
+  nav ul li:last-child {
+    margin-bottom: 0; /* Elimina el margen inferior del último ítem para que no haya espacio extra al final */
+  }
+
+  nav ul li a {
+    padding: 0.8em 0; /* Aumenta el padding vertical del enlace para hacerlo más alto y clicable */
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  img.social {
+    width: 24px;
+  }
+
+  #main-banner {
+    padding: 1rem;
+  }
+
+  .columna-izq,
+  .columna-der {
+    float: none;
+    width: 100%;
+  }
+
+  .redes {
+    gap: 1rem;
+  }
+
+  .social {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+  }
+}
+
+#cuenta-regresiva {
+  text-align: center;
+  margin: 5px auto;
+  padding: 20px;
+  background-color: #CC0000;
+  color: #fff;
+  border-radius: 12px;
+  max-width: 600px;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.countdown-container .tiempo {
+  background-color: #333;
+  padding: 15px 20px;
+  border-radius: 8px;
+  width: 100px;
+}
+
+.countdown-container span {
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+  color: #58a6ff;
+}
+
+.countdown-container p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+#darkModeToggle i {
+  transition: transform 0.4s ease-in-out, color 0.3s ease;
+}
+
+/* Cuando el ícono del sol aparezca, rotará */
+#darkModeToggle .fa-sun {
+  transform: rotate(90deg);
+}
+
+/* Cuando vuelva la luna, vuelve a la posición original */
+#darkModeToggle .fa-moon {
+  transform: rotate(0deg);
+}
+
+/* main.css */
+
+#darkModeToggle {
+  background: transparent;
+  border: none; /* Quitamos el borde por defecto */
+  color: var(--color-texto-nav); /* Usamos la variable de color del texto del nav */
+  font-size: 1.5rem; /* Hacemos el ícono un poco más grande */
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%; /* Lo hacemos circular */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Un sutil fondo al pasar el mouse */
+}
+
+/* En modo oscuro, el hover puede ser sobre blanco */
+body.dark-mode #darkModeToggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#lang-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem; /* Tamaño de la bandera */
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#lang-toggle .flag-icon {
+  border-radius: 4px; /* Bordes redondeados para la bandera */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Estado inicial: oculto y movido hacia abajo */
+.animar-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Estado final: visible y en su posición original */
+.animar-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tooltip {
+  position: relative; /* Contenedor para el tip */
+  cursor: help;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+/* El cuadro del tip (oculto por defecto) */
+.tooltip::before {
+  content: attr(data-tooltip); /* Toma el texto del atributo data-tooltip */
+  position: absolute;
+  bottom: 150%; /* Lo posiciona arriba del ícono */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap; /* Evita que el texto se parta en varias líneas */
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* La flecha del tip (oculta por defecto) */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Muestra el tip al pasar el mouse sobre el ícono */
+.tooltip:hover::before,
+.tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}

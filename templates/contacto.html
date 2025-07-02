@@ -10,28 +10,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
   <link rel="icon" href="/img/1.png" type="image/png" />
   <script src="/JS/components.js" defer></script>
+  <script src="/JS/components.js"></script>
+  <script src="/JS/darkMode.js"></script>
+  <script src="/JS/lenguaje.js"></script>
 </head>
 
 <body>
   <!-- Encabezado -->
   <header>
     <div id="main-banner">
-      <h1>Contacto</h1>
+      <h1 data-i18n="main_title_d">Contacto</h1>
     </div>
   </header>
-
-  <!-- Menú de navegación -->
-  <nav>
+  
+  <!-- Navegación -->
+  <nav role="navigation" aria-label="Menú principal">
     <ul>
-      <li><a href="/index.html">INICIO</a></li>
-      <li><a href="/templates/artistas.html">ARTISTAS</a></li>
-      <li><a href="/templates/cronograma.html">CRONOGRAMA</a></li>
-      <li><a href="/templates/entradas.html">ENTRADAS</a></li>
-      <li><a href="/templates/ubicacion.html">UBICACIÓN</a></li>
-      <li><a href="/templates/contacto.html">CONTACTO</a></li>
-      <li><a href="/templates/juego-preguntas.html">TRIVIA</a></li>
+      <li><a href="/index.html" data-i18n="nav_inicio">INICIO</a></li>
+      <li><a href="/templates/artistas.html" data-i18n="nav_artistas">ARTISTAS</a></li>
+      <li><a href="/templates/cronograma.html" data-i18n="nav_cronograma">CRONOGRAMA</a></li>
+      <li><a href="/templates/entradas.html" data-i18n="nav_entradas">ENTRADAS</a></li>
+      <li><a href="/templates/ubicacion.html" data-i18n="nav_ubicacion">UBICACIÓN</a></li>
+      <li><a href="/templates/contacto.html" data-i18n="nav_contacto">CONTACTO</a></li>
+      <li><a href="/templates/juego-preguntas.html" data-i18n="nav_trivia">TRIVIA</a></li>
+      <button id="darkModeToggle" title="Cambiar tema" aria-label="Activar modo oscuro o claro">
+        <i class="fas fa-moon"></i>
+      <button id="lang-toggle" title="Cambiar Idioma" aria-label="Switch language">
+      <span class="flag-icon"></span>
+        </button>
     </ul>
   </nav>
 
@@ -53,33 +62,60 @@
         <h2 class="titulo-cronograma">Formulario de Contacto</h2>
         <p>¿Tenés alguna duda, consulta o sugerencia? ¡Escribinos!</p>
 
-        <form action="submit_form.php" method="POST">
+        <div id="form-error-global" class="form-error-global" style="display: none;">
+          🛑 Por favor completá todos los campos obligatorios correctamente.
+        </div>
+
+        <form id="mi-formulario-de-contacto" action="submit_form.php" method="POST" novalidate>
           <fieldset>
             <legend><b>Datos del contacto</b></legend>
 
-            <div class="form-group">
+            <div class="form-group input-icon">
               <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" required>
+              <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" id="nombre" name="nombre" required maxlength="30" placeholder="Ingresá tu nombre">
+              </div>
+              <small class="error" id="error-nombre"></small>
             </div>
 
-            <div class="form-group">
+            <div class="form-group input-icon">
               <label for="apellido">Apellido:</label>
-              <input type="text" id="apellido" name="apellido" required>
+              <div class="input-wrapper">
+                <i class="fas fa-user-tag"></i>
+                <input type="text" id="apellido" name="apellido" required placeholder="Ingresá tu apellido"
+                  maxlength="30">
+              </div>
+              <small class="error" id="error-apellido"></small>
             </div>
 
-            <div class="form-group">
+            <div class="form-group input-icon">
               <label for="email">Correo electrónico:</label>
-              <input type="email" id="email" name="email" required>
+              <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" required placeholder="Ejemplo: nombre@correo.com"
+                  maxlength="50">
+              </div>
+              <small class="error" id="error-email"></small>
             </div>
 
-            <div class="form-group">
+            <div class="form-group input-icon">
               <label for="asunto">Asunto:</label>
-              <input type="text" id="asunto" name="asunto">
+              <div class="input-wrapper">
+                <i class="fas fa-pen"></i>
+
+                <input type="text" id="asunto" name="asunto" placeholder="Sobre qué querés escribirnos" maxlength="50">
+              </div>
             </div>
 
             <div class="form-group">
               <label for="mensaje">Mensaje:</label>
-              <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribí tu mensaje aquí..."></textarea>
+              <div>
+                <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Escribí tu mensaje aquí..."
+                  maxlength="300"></textarea>
+              </div>
+              <small class="char-counter" id="contador-mensaje">0 / 300</small>
+              <small class="error" id="error-mensaje"></small>
             </div>
 
             <button type="submit">Enviar</button>
@@ -88,11 +124,11 @@
       </section>
     </section>
   </main>
-
   <!-- Pie de página -->
   <footer>
     <div id="footer-component"></div>
   </footer>
+  <script src="/JS/validarFormulario.js"></script>
 </body>
 
 </html>
