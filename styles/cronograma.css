@@ -1,7 +1,11 @@
+/* ============================================= */
+/* CRONOGRAMA.CSS (CORREGIDO Y UNIFICADO)        */
+/* ============================================= */
+
 .contenedor-cronograma {
   width: 90%;
   margin: 30px auto;
-  background: #ffffff;
+  background-color: var(--color-seccion); /* Usa variable */
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -9,40 +13,50 @@
   gap: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
-/* Tabla cronograma */
+/* Tabla principal del cronograma */
 .tabla-wrapper {
   overflow-x: auto;
   width: 100%;
+  margin-top: 2rem;
 }
+
 .tabla-cronograma {
   border-collapse: collapse;
   width: 100%;
   min-width: 600px;
 }
+
 .tabla-cronograma th,
 .tabla-cronograma td {
   padding: 1rem;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+  text-align: center; /* Centrado para mejor lectura */
+  border: 1px solid var(--color-borde-tabla); /* Usa variable */
   font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-/* Caption  */
+.tabla-cronograma th {
+  background-color: var(--color-nav); /* Usa variable */
+  color: var(--color-texto-nav); /* Usa variable */
+}
+
+/* Título de la tabla */
 .caption-cronograma {
   caption-side: top;
   font-size: 1.8rem;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  color: #CC0000;
+  color: var(--color-botones); /* Usa variable */
   text-align: center;
   margin-bottom: 1rem;
   padding: 0.5rem;
-  border-bottom: 2px solid #cc0000;
 }
 
-/* Cards grid (oculto en desktop por defecto) */
+/* --- Estilos para la vista en móvil (Tarjetas) --- */
+
+/* Contenedor de las tarjetas (oculto en escritorio) */
 .cards-grid {
   display: none;
   width: 100%;
@@ -51,7 +65,7 @@
 
 /* Tarjeta individual */
 .card {
-  background: #fff;
+  background-color: var(--color-seccion); /* Usa variable */
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -59,65 +73,41 @@
   grid-template-rows: repeat(4, auto);
   gap: 0.5rem;
   font-size: 0.9rem;
+  border: 1px solid var(--color-borde-tabla); /* Usa variable */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
+
 .card .fecha {
   font-weight: bold;
-  color: #CC0000;
+  color: var(--color-botones); /* Usa variable */
 }
 
-/* Responsive móvil (≤600px) */
+
+/* --- Media Queries para Responsive --- */
+
+/* Móvil (≤600px) */
 @media (max-width: 600px) {
   .tabla-wrapper {
-    display: none;
+    display: none; /* Oculta la tabla */
   }
-
   .cards-grid {
-    display: grid;
+    display: grid; /* Muestra las tarjetas */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-
-  .titulo-cronograma {
+  .caption-cronograma { /* Ajusta el título para móvil */
     font-size: 1.5rem;
   }
-
   .card {
     font-size: 0.85rem;
     padding: 0.75rem;
   }
 }
 
-/* Responsive tablets y laptops pequeñas (≤992px) */
+/* Tablets y laptops pequeñas (≤992px) */
 @media (max-width: 992px) {
   .tabla-cronograma th,
   .tabla-cronograma td {
     padding: 0.5rem;
     font-size: 0.9rem;
   }
-}
-
-.tabla-wrapper {
-  overflow-x: auto;
-  width: 100%;
-  margin-top: 2rem;
-}
-
-.tabla-cronograma {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 600px;
-}
-
-.tabla-cronograma th,
-.tabla-cronograma td {
-  padding: 1rem;
-  text-align: center;
-  border: 1px solid #ccc;
-}
-
-.caption-cronograma {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #cc0000;
 }

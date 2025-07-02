@@ -23,6 +23,8 @@
   --color-acento-entradas: #1a73e8;
   --color-resumen-fondo: #f0f4ff;
   --color-resumen-borde: #c5cdf9;
+  --color-tooltip-fondo: #333;
+  --color-tooltip-texto: #fff;
 }
 
 body.dark-mode {
@@ -45,6 +47,8 @@ body.dark-mode {
   --color-acento-entradas: #8ab4f8;
   --color-resumen-fondo: #30384a;
   --color-resumen-borde: #505a74;
+  --color-tooltip-fondo: #f5f5f5;
+  --color-tooltip-texto: #2c2c2c;
 }
 
 /* 2. APLICACIÓN DE VARIABLES A TUS ESTILOS */
@@ -108,13 +112,10 @@ header h1 {
   font-weight: bold;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.5s ease;
-  animation: fadeInDown 2s ease;
 }
 
 #main-banner h1::before {
   content: "🎶 ";
-  font-size: 1.2em;
 }
 
 nav {
@@ -126,7 +127,6 @@ nav {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  animation: fadeInDown 2s ease;
   transition: background-color 0.3s ease;
 }
 
@@ -149,7 +149,8 @@ nav ul li a {
 }
 
 nav ul li a:hover,
-nav ul li a:focus {
+nav ul li a:focus,
+nav ul li a.active {
   background-color: var(--color-botones);
   color: #ffffff; /* Mantenemos blanco para el hover sobre el botón */
 }
@@ -190,8 +191,9 @@ img.social {
 }
 
 footer {
-    text-align: center;
+  text-align: center;
   margin-top: 10px;
+  background-color: var(--color-footer);
 }
 
 .social-icons a {
@@ -350,12 +352,11 @@ iframe {
   }
 }
 #video-destacado {
-  width: 100%;
-  background-color: #ffffff;
+  width: 75%;
+  background-color: var(--color-seccion);
   padding: 2rem 1rem;
   display: flex;
   justify-content: center;
-  animation: zoomIn 2s ease;
 }
 
 .contenedor-video {
@@ -439,7 +440,7 @@ iframe {
   margin: 5px auto;
   padding: 20px;
   background-color: #CC0000;
-  color: #fff;
+  color: var(--color-texto-header);
   border-radius: 12px;
   max-width: 600px;
 }
@@ -453,7 +454,7 @@ iframe {
 }
 
 .countdown-container .tiempo {
-  background-color: #333;
+  background-color: rgba(0,0,0,0.2);
   padding: 15px 20px;
   border-radius: 8px;
   width: 100px;
@@ -712,7 +713,7 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(204, 0, 0, 0.8);
+  background-color: var(--color-botones);
   border: none;
   color: white;
   font-size: 2rem;
@@ -928,9 +929,8 @@ body.dark-mode #darkModeToggle:hover {
   bottom: 150%; /* Lo posiciona arriba del ícono */
   left: 50%;
   transform: translateX(-50%);
-  
-  background-color: #333;
-  color: #fff;
+  background-color: var(--color-tooltip-fondo);
+  color: var(--color-tooltip-texto); 
   padding: 8px 12px;
   border-radius: 5px;
   font-size: 0.9rem;
