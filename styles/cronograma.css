@@ -1,22 +1,12 @@
-/* ============================================= */
-/* CRONOGRAMA.CSS (CORREGIDO Y UNIFICADO)        */
-/* ============================================= */
-
 .contenedor-cronograma {
   width: 90%;
   margin: 30px auto;
-  background-color: var(--color-seccion); /* Usa variable */
+  background-color: var(--color-seccion);
   padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
 
-/* Tabla principal del cronograma */
 .tabla-wrapper {
   overflow-x: auto;
   width: 100%;
@@ -29,85 +19,65 @@
   min-width: 600px;
 }
 
-.tabla-cronograma th,
+.tabla-cronograma th {
+  padding: 1rem;
+  text-align: center; 
+  border: 1px solid var(--color-borde-tabla);
+  background-color: var(--color-nav);
+  color: var(--color-texto-nav);
+}
+
 .tabla-cronograma td {
   padding: 1rem;
-  text-align: center; /* Centrado para mejor lectura */
-  border: 1px solid var(--color-borde-tabla); /* Usa variable */
-  font-size: 1rem;
+  text-align: left;
+  vertical-align: middle; /* CLAVE 1: Centra verticalmente */
+  border: 1px solid var(--color-borde-tabla);
   transition: all 0.3s ease;
 }
 
-.tabla-cronograma th {
-  background-color: var(--color-nav); /* Usa variable */
-  color: var(--color-texto-nav); /* Usa variable */
+/* CLAVE 2: Centra la primera (Fecha) y última (Hora) columna */
+.tabla-cronograma td:first-child,
+.tabla-cronograma td:last-child {
+  text-align: center;
 }
 
-/* Título de la tabla */
 .caption-cronograma {
-  caption-side: top;
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--color-botones); /* Usa variable */
+  color: var(--color-botones);
   text-align: center;
   margin-bottom: 1rem;
-  padding: 0.5rem;
 }
 
-/* --- Estilos para la vista en móvil (Tarjetas) --- */
-
-/* Contenedor de las tarjetas (oculto en escritorio) */
+/* --- Vista en móvil (Tarjetas) --- */
 .cards-grid {
   display: none;
   width: 100%;
   gap: 1rem;
 }
-
-/* Tarjeta individual */
 .card {
-  background-color: var(--color-seccion); /* Usa variable */
+  background-color: var(--color-seccion);
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  border: 1px solid var(--color-borde-tabla); /* Usa variable */
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  border: 1px solid var(--color-borde-tabla);
 }
-
 .card .fecha {
   font-weight: bold;
-  color: var(--color-botones); /* Usa variable */
+  color: var(--color-botones);
 }
 
-
-/* --- Media Queries para Responsive --- */
-
-/* Móvil (≤600px) */
 @media (max-width: 600px) {
-  .tabla-wrapper {
-    display: none; /* Oculta la tabla */
-  }
+  .tabla-wrapper { display: none; }
   .cards-grid {
-    display: grid; /* Muestra las tarjetas */
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-  .caption-cronograma { /* Ajusta el título para móvil */
-    font-size: 1.5rem;
-  }
-  .card {
-    font-size: 0.85rem;
-    padding: 0.75rem;
-  }
 }
 
-/* Tablets y laptops pequeñas (≤992px) */
-@media (max-width: 992px) {
-  .tabla-cronograma th,
-  .tabla-cronograma td {
-    padding: 0.5rem;
-    font-size: 0.9rem;
-  }
+/* Añade esto al final de tu archivo cronograma.css */
+
+.seccion-ancha {
+  width: 100%;      /* Ocupa casi todo el ancho disponible */
+  max-width: 1200px; /* Un límite para que no se estire demasiado en pantallas gigantes */
+  margin: 30px auto
 }

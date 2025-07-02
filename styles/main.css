@@ -75,15 +75,6 @@ body {
   flex-direction: column;
 }
 
-/*header {
-    background-color: #fe5d25;
-    padding: 20px;
-    text-align: center;
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: bold;
-
-}*/
 header {
   background-color: var(--color-header);
   color: var(--color-texto-header);
